@@ -10,7 +10,12 @@ li{list-style-type: none;}
 i.fa.fa-check{color: #ffaf04}
 .carousel-control.right, .carousel-control.left{background-image: none;}
 .row form{display: block; text-align: center; width: 65%; margin: 0 auto;}
-.navbar-default .navbar-toggle .icon-bar {background-color: #ffffff !important; }
+.navbar-default .navbar-toggle .icon-bar {background-color: #FFFFFF !important; }
+.navbar-default .navbar-toggle {background-color: #3BA3D8 !important; }
+.navbar-default .navbar-toggle:hover {background-color: #FFFFFF !important; }
+.navbar-default .navbar-toggle:hover .icon-bar {background-color: #3BA3D8 !important; }
+.navbar-fixed-top {background-color: rgb(53, 157, 208) !important; top: 0 !important; position: fixed !important; opacity: 0.9;}
+.container {width: 900px !important;}
 
 /*MENU*/
 header{position: relative;}
@@ -71,6 +76,7 @@ li.whiteFont {font-size: 17px; font-weight: 400; }
 
 /*BOTÓN*/
 .greenButton{background-color: #a3db63; color: #FFFFFF; text-transform: uppercase; padding: 6px 30px; font-size: 24px; border-radius: 0; font-weight: 600;}
+.greenButton:hover{background-color: #FFFFFF; color: #a3db63;}
 
 /*FOOTER*/
 footer{background-color: #ffaf04;color: #FFFFFF;padding: 69px 0 40px;}
@@ -78,8 +84,13 @@ footer .text-left{border-left: 1px solid #FFFFFF;font-size: 18px;}
 footer .text-right{font-size: 18px;}
 
 /*MEDIA QUERIES*/
+
+@media (min-width: 852px){
+#Informacion {margin-right: 120px !important; }
+}
+
 @media (max-width: 1200px){
-.container {width: 900px;}
+.container {width: 900px !important;}
 .sliderExito img {max-width: inherit !important; width: 120% !important; }
 }
 
@@ -88,6 +99,7 @@ footer .text-right{font-size: 18px;}
 .btn-default:hover {color: #A3DB63; background-color: #FFFFFF;}
 form .container {width: 970px; }
 .sliderExito img {max-width: inherit; width: 100%; }
+.container {width: 900px !important;}
 }
 
 @media (max-width: 990px){
@@ -101,6 +113,7 @@ h1 {font-size: 28px; }
 .textCenterForm {font-size: 21px; }
 .greenButton {font-size: 16px; }
 .carousel-indicators li{display: none;}
+.container {width: 768px !important;}
 }
 
 @media (max-width: 767px){
@@ -109,23 +122,29 @@ h1 {font-size: 28px; }
 .container {width: 600px; }
 .sliderForm {position: initial; background-color: #3BA3D8; }
 section.Carrusel {display: none; }
+.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
+.container {width: 601px !important;}
 }
 
 @media(max-width: 600px){
-	.container {width: 480px; }
+	.container {width: 480px !important;}
 	.sliderForm {background-color: #3BA3D8;}
+	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
 }
 
 @media (max-width: 480px){
-	.container {width: 400px; }
+	.container {width: 400px !important; }
 	.sliderForm {background-color: #3BA3D8;}
 	#Knowledge {font-size: 32px; }
 	h2 {font-size: 29px; }
+	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
+	.navbar-default .navbar-nav>li>a {padding-bottom: 40px; }
 }
 
 @media(max-width: 320px){
-	.container {width: 320px; }
+	.container {width: 320px !important; }
 	h2 {font-size: 25px; }
 	#Knowledge {font-size: 28px; }
-	.blueBg {background: none; box-shadow: none; }
+	.blueBg {background: none;}
+	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
 }

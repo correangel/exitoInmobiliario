@@ -32,12 +32,12 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Misión</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Conocimientos</a></li>
-            <li><a href="#">Beneficios</a></li>
-            <li><a href="#">Información</a></li>
+            <li><a id="Contacto">Contacto</a></li>
+            <li><a id="Mision">Misión</a></li>
+            <li><a id="Videos">Videos</a></li>
+            <li><a id="Conocimientos">Conocimientos</a></li>
+            <li><a id="Beneficios">Beneficios</a></li>
+            <li><a id="Informacion">Información</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -75,7 +75,7 @@
   </a>
     </div>
     </section>
-    <section class="sliderForm">
+    <section class="sliderForm" id="tituloContacto">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -103,7 +103,7 @@
       </div>
     </section>
   <!--Section Mision-->
-  <section class="sectionPadding">
+  <section class="sectionPadding" id="tituloMision">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -114,7 +114,7 @@
     </div>
   </section>
   <!--Section Slider-->
-  <section class="yellowBg">
+  <section class="yellowBg" id="tituloVideos">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -126,7 +126,7 @@
     </div>
   </section>
   <!--Section Conocimientos-->
-  <section class="lightGreyBg">
+  <section class="lightGreyBg" id="tituloConocimientos">
     <div class="container Grey">
       <div class="row">
         <div class="col-sm-12">
@@ -246,7 +246,7 @@
     </div>
   </section>
   <!--Section Beneficios-->
-  <section class="blueBg">
+  <section class="blueBg" id="tituloBeneficios">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -261,7 +261,7 @@
     </div>
   </section>
   <!--Section Buscamos-->
-  <section class="lightGreyBg">
+  <section class="lightGreyBg" id="tituloInformacion">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -293,12 +293,30 @@
     </div>
   </footer>
 
-   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
     <script>
+		$('#Contacto').click(function() {
+				$('body').scrollTo('#tituloContacto', 800);
+		});
+		$('#Mision').click(function() {
+				$('body').scrollTo('#tituloMision', 800);
+		});
+		$('#Videos').click(function() {
+				$('body').scrollTo('#tituloVideos', 800);
+		});
+		$('#Conocimientos').click(function() {
+				$('body').scrollTo('#tituloConocimientos', 800);
+		});
+		$('#Beneficios').click(function() {
+				$('body').scrollTo('#tituloBeneficios', 800);
+		});
+		$('#Informacion').click(function() {
+				$('body').scrollTo('#tituloInformacion', 800);
+		});
       $(window).on("scroll", function() {
-         if ($(this).scrollTop() > 400) {
+         if ($(this).scrollTop() > 500) {
            $("#exitoMenu").addClass("navbar-fixed-top");
          } else {
            $("#exitoMenu").removeClass("navbar-fixed-top");
