@@ -43,6 +43,7 @@
       </div><!-- /.container-fluid -->
     </nav>
   </header>
+  <!--Carrousel-->
   <section class="Carrusel">
     <div id="carousel-example-generic" class="carousel slide sliderExito" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -51,18 +52,18 @@
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         </ol>
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner blueBg" role="listbox">
             <div class="item active">
-              <img src="img/carousel1.jpg">
+              <img src="img/header.jpg" style="blueBg">
             </div>
             <div class="item">
-              <img src="img/carousel1.jpg">
+              <img src="img/header2.jpg">
             </div>
             <div class="item">
-              <img src="img/carousel1.jpg">
+              <img src="img/header.jpg">
             </div>
             <div class="item">
-              <img src="img/carousel1.jpg">
+              <img src="img/header2.jpg">
             </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -75,40 +76,34 @@
   </a>
     </div>
     </section>
-    <section class="sliderForm" id="tituloContacto">
+    <section class="sliderForm">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <h1 class="transformar">Éxito <span class="yellowFont">Inmobiliario</span> ¡YA!</h1>
-            <p class="textCenterForm">Conviertete en <span class="yellowFontPro">un profesional inmobiliario.</span><br>Envianos tus datos.</p>
-            <form class="formExito">
-                <div class="form-group">
-                  <div class="col-sm-6">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Teléfono">
-                  </div>
-                  <div class="col-sm-12">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Correo Electrónico">
-                  </div>
-                  <div class="col-sm-12">
-                    <textarea class="form-control" rows="3" placeholder="Mensaje" id="Mensaje"></textarea>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-default greenButton">Enviar</button>
-            </form>
+          <div class="col-sm-6">
+            <h1 class="transformarh1"><span class="yellowFont">Éxito</span> <p class="tituloInmobil">Inmobiliario</p><span class="yellowFontYa"> ¡YA!</h1>
+          </div>
+            <div class="col-sm-6">
+            <p class="textCenterForm"><h2 class="yellowFontComienza">¡Comienza a ganar dinero!</h2></p>
+            <p class="textCenterForm">Conviertete en un profesional inmobiliario.</span><strong>¡Escribe tus datos para recibir el video de entrenamiento totalmente</strong> <span class="yellowFontPro">GRATIS</span>!</p>
+	          <div class="col-sm-12">
+	            <input type="text" class="form-control" id="Name1" placeholder="Nombre">
+	          </div>
+	          <div class="col-sm-12">
+	            <input type="text" class="form-control" id="Email1" placeholder="Correo Electrónico">
+	          </div>
+                <button type="submit" class="btn btn-default greenButton">SÍ, QUIERO EL VIDEO</button>
           </div>
         </div>
       </div>
     </section>
   <!--Section Mision-->
-  <section class="sectionPadding" id="tituloMision">
+  <section class="lightGreyBg">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="yellowFont">Misión</h2>
-          <p class="profesionalesFont">Desarrollar profesionales <strong>en el sector inmobiliario</strong></p>
+          <h2 class="yellowFontQuieres">¿Quieres conocer el gratificante <span class="yellowFontPro"><br>mundo de bienes raíces?</span></h2>
+          <p class="objetivoFont">NUESTRO OBJETIVO:</p>
+          <p class="textCenterExitoso">Hacerte exitoso <span class="blueSpan"><br>en el mercado inmobiliario.</span></p>
         </div>
       </div>
     </div>
@@ -117,140 +112,40 @@
   <section class="yellowBg" id="tituloVideos">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <h2>¡Aprende a emprender!</h2>
-          <p class="unicoFont">Es el único entrenamiento que explica el proceso completo para desarrollar tu propio negocio inmobiliario.</p>
+        <div class="col-sm-6">
           <iframe src="https://www.youtube.com/embed/oEWOexR5z9c" frameborder="0" allowfullscreen class="videoYoutube"></iframe>
+          <p class="blackFont">En este video te presentamos <span class="blackFontSpan"><br>el secreto para alcanzar el éxito financiero</span><br> a traves de bienes raíces.</p>
+        </div>
+        <div class="col-sm-6">
+        	<p class="experienceFont">Te damos el <span class="whiteSpan">"paso a paso"</span> del <span class="whiteSpan">camino al éxito inmobiliario sin</span> necesidad de que <span class="whiteSpan">cuentes con experiencia</span></p>
+        	<button type="submit" class="btn btn-default blueButton">¡ME INTERESA!</button>
         </div>
       </div>
     </div>
   </section>
-  <!--Section Conocimientos-->
-  <section class="lightGreyBg" id="tituloConocimientos">
-    <div class="container Grey">
+  <!--Section Inversion-->
+  <section id="tituloConocimientos">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12">
-          <h2 class="yellowFont" id="Knowledge">Conocimientos</h2>
-            <!--Acordeon-->
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <h3><span>1</span>Proceso de atención a compradores<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                  <div class="panel-body">
-                    Proceso de atención a compradores – Aprenderás a generar entre $30,000 y $100,000 a través de conseguirle un inmueble a tu comprador.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <h3><span>2</span>Proceso de venta de un inmueble<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                  <div class="panel-body">
-                    Proceso de venta de un inmueble – Aprenderás a generar de $60,000 a $200,000 en la venta de tu primer inmueble a través del proceso completo que sólo nosotros mostramos.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h3><span>3</span>Estrategia para obtener tu primera exclusiva<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="panel-body">
-                    Aprenderás a obtener tu primera exclusiva y te revelaremos la estrategia para que puedas hacerlo en repetidas ocasiones, aún cuando carezcas de referidos.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFour">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <h3><span>4</span>Casos típicos del mercado<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                  <div class="panel-body">
-                    Del mercado ​(​intestados, adjudicaciones, inmatriculaciones, etc​)​, como promover los inmuebles, puntos clave para proteger  al propietario​ ​durante el proceso de venta.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFive">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      <h3><span>5</span>Perfilación de compradores<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                  <div class="panel-body">
-                    ​P​erfila​ción​ ​de ​compradores​,​ proceso y tiempos para ​la obtención de un mejor crédito​.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingSix">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      <h3><span>6</span>Estimación del valor comercial de una propiedad<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                  <div class="panel-body">
-                    De acuerdo al valor que el mercado está dispuesto a pagar por un inmueble, así como a obtener el valor más alto ​en caso de venta​.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingSeven">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                      <h3><span>7</span>Cómo brindar protección al arrendador<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></h3>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-                  <div class="panel-body">
-                    Minimizando los posibles riesgos en un proceso de renta de cualquier inmueble.
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingEight">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                      <h3><span>8</span>Cómo desarrollar tu propio negocio inmobiliario</h3>
-                    </a>
-                  </h4>
-              </div>
-            </div>
-          <!--Acordeon-->
+        <div class="col-sm-3">
+          
+        </div>
+        <div class="col-sm-4">
+            <h2 class="blackFontRecover">¡Recupera tu <span class="yellowFont">inversion</span> <span class="blackFontSell">desde la primera venta!</span></h2>
+            <button type="submit" class="btn btn-default yellowButton">¡MULTIPLICA TU INVERSIÓN!</button>
+        </div>
+        <div class="col-sm-5">
+        	<img src="img/inversion.png">
         </div>
       </div>
     </div>
   </section>
   <!--Section Beneficios-->
-  <section class="blueBg" id="tituloBeneficios">
+  <section class="beneficiosBg">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="yellowFont">Beneficios</h2>
+          <h2 class="yellowFont">APRENDE A <span class="whiteFont">APALANCARTE</span><br> <span class="blackFontSell">Y DESARROLLAR UN EQUIPO TRIUNFADOR</span></h2>
           <ul>
             <li class="whiteFont"><i class="fa fa-check fa-2x"></i> No necesitas tener experiencia para poder arrancar tu negocio; nosotros te enseñamos desde el inicio, sin necesidad de que tengas experiencia en el sector inmobiliario o de bienes raíces</li>
             <li class="whiteFont"><i class="fa fa-check fa-2x"></i> Somos el único entrenamiento que en un fin de semana te da las herramientas necesarias para que puedas iniciar tu propio negocio inmobiliario como un verdadero profesional</li>
@@ -260,25 +155,52 @@
       </div>
     </div>
   </section>
-  <!--Section Buscamos-->
-  <section class="lightGreyBg" id="tituloInformacion">
+  <!--Section Carlos Nava-->
+  <section>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <h2 class="blueFont">Buscamos personas que</h2>
-          <p class="textCenterSize"><strong class="transformar">Tomen acción</strong>, estén dispuestas a aprender y convertirse en uno más de nuestros casos de éxito, capaces de seguir paso a paso un sistema probado y funcional para ganar dinero a través de la comercialización de bienes inmuebles con poca o nula inversión</p>
-          <h3 class="trainingFont">Detalles del entrenamiento:</h3>
-          <div class="col-sm-6">
-            <p class="trainingSize">Duración:</p>
-            <strong class="trainingStrong">36 horas</strong>
-          </div>
-          <div class="col-sm-6">
-            <p class="trainingSize">Lugar:</p>
-            <strong class="trainingCap">Por confirmar</strong>
-          </div>
+      <div class="col-sm-5">
+      	<img src="img/carlosNava2.jpg" id="carlosNava">
+      </div>
+        <div class="col-sm-7">
+          <h2 class="yellowFontCarlos"><span class="blackFontSell">Soy</span> Carlos Nava</h2>
+          <p class="textCenterSize"><strong class="transformar"></strong>Durante 15 años estuve trabajando como consultor de empresas, dirigiendo proyectos en empresas líderes en México y Latinoamérica, y aunque tenia un buen trabajo, sabia que no podía mantener ese ritmo de trabajo por siempre, sin mencionar que muchos colegas en puestos directivos eran despedidos sin reservas al cumplir los 45 años de edad.</p>
+          <p class="textSatisfaction">"Mi satisfacción más grande es el poder servir a las personas y desarrollar profesionales inmobiliarios con resultados extraordinarios que ningún empleo promedio puede darte".</p>
+          <button type="submit" class="btn btn-default greenButtonDos">CONÓCEME</button>
         </div>
       </div>
     </div>
+  </section>
+  <!--section Aparta tu lugar-->
+  <section class="brownBg">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-6">
+  				<button type="submit" class="btn btn-default blueButtonDos">¡SÍ, QUIERO GANAR DINERO!</button>
+  			</div>
+  			<div class="col-sm-6">
+  				<p class="whiteFontAparta"><strong>Aparta tu lugar</strong><br> ¡solo faltas tú!</p>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <!--section formulario 2-->
+  <section class="blueBg">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-12">
+  				<h3 class="whiteFontBegin">¡Comienza a ganar dinero!</h3>
+  				<p class="whiteFontFree">Ingresa tus datos para tener acceso a la serie de videos GRATUITOS del curso <br><strong class="whiteFontFreedom">"Libertad Financiera"</strong></p>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="Name2" placeholder="Nombre">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="Email2" placeholder="Correo Electrónico">
+                  </div>
+                <button type="submit" class="btn btn-default greenButtonDos">RECIBIR VIDEO</button>
+  			</div>
+  		</div>
+  	</div>
   </section>
   <footer>
     <div class="container">
@@ -287,7 +209,7 @@
           <strong class="transformar"><a href="#">Aviso de privacidad</a></strong>
         </div>
         <div class="col-xs-6 text-left">
-          Powered by <strong class="transformar"><a target="#blank" href="http://concepthaus.mx/">Concept Haus</a></strong>
+          Powered by <strong class="transformar"><a target="#blank" href="http://concepthaus.mx/">CONCEPT HAUS</a></strong>
         </div>
       </div>
     </div>
@@ -316,7 +238,7 @@
 				$('body').scrollTo('#tituloInformacion', 800);
 		});
       $(window).on("scroll", function() {
-         if ($(this).scrollTop() > 500) {
+         if ($(this).scrollTop() > 460) {
            $("#exitoMenu").addClass("navbar-fixed-top");
          } else {
            $("#exitoMenu").removeClass("navbar-fixed-top");
