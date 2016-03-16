@@ -56,7 +56,7 @@
         </ol>
         <div class="carousel-inner blueBg" role="listbox">
             <div class="item active">
-              <img src="img/header.jpg" style="blueBg">
+              <img src="img/header.jpg">
             </div>
             <div class="item">
               <img src="img/header2.jpg">
@@ -88,16 +88,17 @@
             <p class="textCenterForm"><h2 class="yellowFontComienza">¡Comienza a ganar dinero!</h2></p>
             <p class="textCenterForm">Conviertete en un profesional inmobiliario.</span><strong>¡Escribe tus datos para recibir el video de entrenamiento totalmente</strong> 
               <span class="yellowFontPro">GRATIS</span>!</p>
-             
               <form id="f1">
-	          <div class="col-sm-12">
-	            <input name="nombre" type="text" class="form-control" id="Name1" placeholder="Nombre">
-	          </div>
-	          <div class="col-sm-12">
-	            <input name="correo" type="text" class="form-control" id="Email1" placeholder="Correo Electrónico">
-	          </div>
-                <button type="submit" class="btn btn-default greenButton">SÍ, QUIERO EL VIDEO</button>
-                </form>
+                  <div class="col-sm-12">
+                    <input name="nombre" type="text" class="form-control" id="Name1" placeholder="Nombre">
+                  </div>
+                  <div class="col-sm-12">
+                    <input name="correo" type="text" class="form-control" id="Email1" placeholder="Correo Electrónico">
+                  </div>
+                  <div class="col-sm-12">
+                      <button type="submit" class="btn btn-default greenButton">SÍ, QUIERO EL VIDEO</button>
+                  </div>
+              </form>
           </div>
         </div>
       </div>
@@ -163,11 +164,11 @@
   </section>
   <div id="AjaxAct"></div>
   <!--Section Carlos Nava-->
-  <section>
+  <section id="carlosNava">
     <div class="container">
       <div class="row">
       <div class="col-sm-5">
-      	<img src="img/carlosNava2.jpg" id="carlosNava">
+      	<img src="img/carlosNava2.jpg">
       </div>
         <div class="col-sm-7">
           <h2 class="yellowFontCarlos"><span class="blackFontSell">Soy</span> Carlos Nava</h2>
@@ -253,11 +254,19 @@
 		$('#Informacion').click(function() {
 				$('body').scrollTo('#tituloInformacion', 800);
 		});
+          $(window).on("scroll", function() {
+         if ($(this).scrollTop() < 460) {
+           $("#exitoMenu").addClass("navbar-fixed-gone");
+         } else {
+           $("#exitoMenu").removeClass("navbar-fixed-gone");
+         }
+    });
+
       $(window).on("scroll", function() {
          if ($(this).scrollTop() > 460) {
            $("#exitoMenu").addClass("navbar-fixed-top");
          } else {
-           $("#exitoMenu").removeClass("navbar-fixed-top");
+           $("#exitoMenu").removeClass("navbar-fixed-gone");
          }
     });
     </script>
