@@ -68,9 +68,7 @@ require 'phpmailer/class.pop3.php';
 	    */
 
 
-
 function  checkmailfirmas($correoo){
-
 if(preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$correoo))
 {
 return true;
@@ -79,6 +77,8 @@ else{
 return false;
 }
 }
+
+
 
 
 
@@ -99,13 +99,16 @@ if(checkmailfirmas($correoo)){
 
 
 
-				$sql="INSERT INTO fo1(`id`, `nombre`,`correo`) VALUES
+
+				$sql="INSERT INTO Formulario1(`id`, `nombre`,`correo`) VALUES
 				('','$nomm','$correoo')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
-												<script>sweetAlert({title:'¡Gracias!',text:'Datos guardados con éxito', confirmButtonColor:'#19A796' ,type:'success'}); </script></div>";
+												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
+													window.open('http://192.168.33.10/exitoInmobiliario/formulario3.html','_blank' ); 
+												}); </script></div>";
 			                }
 
 			    else{
@@ -134,7 +137,7 @@ else {
 else{
 
 	    echo "<div id='AjaxAct'> 
-							 	<script>sweetAlert({title:'Error',text:'Error mail invalido',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
+							 	<script>sweetAlert({title:'Error',text:'Este e-mail ya está en nuestra base de datos o es incorrecto',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
 	 }
 }
 		
@@ -142,6 +145,7 @@ else{
 	echo "<div id='AjaxAct'>
 	<script>sweetAlert({title:'Error',text:'Datos incompletos',confirmButtonColor:'#F06060',type:'error'});</script></div>";
 }
+
 
 		
 

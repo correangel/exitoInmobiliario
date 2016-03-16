@@ -103,13 +103,14 @@ if(checkmailfirmas($corre)){
 
 
 
-				$sql="INSERT INTO f2(`id`, `nombre`,`correo`) VALUES
+				$sql="INSERT INTO Formulario2(`id`, `nombre`,`correo`) VALUES
 				('','$nombb','$corre')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
-												<script>sweetAlert({title:'¡Gracias!',text:'Datos guardados con éxito', confirmButtonColor:'#19A796' ,type:'success'}); </script></div>";
+												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){swal
+													('VIDEO', 'Video de prueba', 'success'); }); </script></div>";
 			                }
 
 			    else{
