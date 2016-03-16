@@ -10,6 +10,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/exito.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -84,14 +86,18 @@
           </div>
             <div class="col-sm-6">
             <p class="textCenterForm"><h2 class="yellowFontComienza">¡Comienza a ganar dinero!</h2></p>
-            <p class="textCenterForm">Conviertete en un profesional inmobiliario.</span><strong>¡Escribe tus datos para recibir el video de entrenamiento totalmente</strong> <span class="yellowFontPro">GRATIS</span>!</p>
+            <p class="textCenterForm">Conviertete en un profesional inmobiliario.</span><strong>¡Escribe tus datos para recibir el video de entrenamiento totalmente</strong> 
+              <span class="yellowFontPro">GRATIS</span>!</p>
+             
+              <form id="f1">
 	          <div class="col-sm-12">
-	            <input type="text" class="form-control" id="Name1" placeholder="Nombre">
+	            <input name="nombre" type="text" class="form-control" id="Name1" placeholder="Nombre">
 	          </div>
 	          <div class="col-sm-12">
-	            <input type="text" class="form-control" id="Email1" placeholder="Correo Electrónico">
+	            <input name="correo" type="text" class="form-control" id="Email1" placeholder="Correo Electrónico">
 	          </div>
                 <button type="submit" class="btn btn-default greenButton">SÍ, QUIERO EL VIDEO</button>
+                </form>
           </div>
         </div>
       </div>
@@ -155,6 +161,7 @@
       </div>
     </div>
   </section>
+  <div id="AjaxAct"></div>
   <!--Section Carlos Nava-->
   <section>
     <div class="container">
@@ -191,16 +198,21 @@
   			<div class="col-sm-12">
   				<h3 class="whiteFontBegin">¡Comienza a ganar dinero!</h3>
   				<p class="whiteFontFree">Ingresa tus datos para tener acceso a la serie de videos GRATUITOS del curso <br><strong class="whiteFontFreedom">"Libertad Financiera"</strong></p>
+  				<form id="f2">
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="Name2" placeholder="Nombre">
+                    <input name="nomb" type="text" class="form-control" id="Name2" placeholder="Nombre">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="Email2" placeholder="Correo Electrónico">
+                    <input name="corr" type="text" class="form-control" id="Email2" placeholder="Correo Electrónico">
                   </div>
                 <button type="submit" class="btn btn-default greenButtonDos">RECIBIR VIDEO</button>
+                </form>
   			</div>
   		</div>
   	</div>
+
+
+
   </section>
   <footer>
     <div class="container">
@@ -218,7 +230,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollTo.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
     <script>
+
 		$('#Contacto').click(function() {
 				$('body').scrollTo('#tituloContacto', 800);
 		});
@@ -245,5 +261,66 @@
          }
     });
     </script>
+
+<script>
+        jQuery(function(){
+           var form = jQuery('form#f1');
+           form.submit(function(e){
+               e.preventDefault();
+               dataString = form.serialize();
+
+               jQuery.ajax({
+                   type:'POST',
+                   url:'server/formulario1.php',
+                   data: dataString,
+                  /*beforeSend: function(){
+                      swal({   title: "Espera...",   
+                               text: "Estamos validando tus datos.", 
+                               showConfirmButton: false });
+                   },*/
+                   success:function(data){
+                       jQuery('#AjaxAct').replaceWith(data);
+                   },
+                   complete:function(){
+
+                   }
+               });
+               return false;
+           })
+       }) ;
+    </script>
+
+   <script>
+        jQuery(function(){
+           var form = jQuery('form#f2');
+           form.submit(function(e){
+               e.preventDefault();
+               dataString = form.serialize();
+
+               jQuery.ajax({
+                   type:'POST',
+                   url:'server/formulario2.php',
+                   data: dataString,
+                  /*beforeSend: function(){
+                      swal({   title: "Espera...",   
+                               text: "Estamos validando tus datos.", 
+                               showConfirmButton: false });
+                   },*/
+                   success:function(data){
+                       jQuery('#AjaxAct').replaceWith(data);
+                   },
+                   complete:function(){
+
+                   }
+               });
+               return false;
+           })
+       }) ;
+    </script>
+
+
+
+
+
   </body>
 </html>
