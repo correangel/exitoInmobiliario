@@ -20,6 +20,17 @@ nav.navbar {transition: all 1.2s ease; }
 .navbar-fixed-gone{top:-100px; position: fixed !important;}
 .container {width: 900px !important;}
 
+.navbar img{
+	transition: all 1.2s ease; 
+}
+
+.navbar-fixed-top img{
+    height: 70px;
+    margin-top: 10px;
+    transition: all 1.2s ease;
+    margin-left: 40px;
+}
+
 /*MENU*/
 header{position: relative;}
 .navbar-brand {float: inherit; height: auto; padding: 5px 15px; display: inline-block; }
