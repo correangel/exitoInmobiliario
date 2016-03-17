@@ -73,7 +73,7 @@ require 'phpmailer/class.pop3.php';
 
 */
 
-function  checkmailfirmas($corre){
+function  checkmailf2($corre){
 
 if(preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$corre))
 {
@@ -95,7 +95,7 @@ $corre = mysqli_real_escape_string($db,$_POST['corr']);
 $longno = strlen ($nombb);
 
 
-if(checkmailfirmas($corre)){
+if(checkmailf2($corre)){
     if(!is_numeric($nombb))
     {
     	if($longno > 3)
@@ -108,9 +108,10 @@ if(checkmailfirmas($corre)){
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
-							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
-												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){swal
-													('VIDEO', 'Video de prueba', 'success'); }); </script></div>";
+							echo "<div id='AjaxAct'><script>document.getElementById('f2').reset(); </script> 
+												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
+													window.open('http://192.168.33.10/exitoInmobiliario/formulario3.html','_blank' ); 
+												}); </script></div>";//En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
 			                }
 
 			    else{

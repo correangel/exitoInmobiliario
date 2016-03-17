@@ -68,7 +68,7 @@ require 'phpmailer/class.pop3.php';
 	    */
 
 
-function  checkmailfirmas($correoo){
+function  checkmailf1($correoo){
 if(preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$correoo))
 {
 return true;
@@ -89,9 +89,18 @@ if(isset($_POST['nombre']) && !empty($_POST['nombre']) AND
 $nomm = mysqli_real_escape_string($db,$_POST['nombre']);
 $correoo = mysqli_real_escape_string($db,$_POST['correo']);
 $longnom = strlen ($nomm);
+$query = "SELECT `correo` FROM Formulario1 WHERE `correo` = '$correoo';";	
+$result = mysqli_query($db, $query); 
 
 
-if(checkmailfirmas($correoo)){
+
+if(checkmailf1($correoo)){
+     
+
+if(mysqli_num_rows($result) == 0){
+
+
+
     if(!is_numeric($nomm))
     {
     	if($longnom > 3)
@@ -108,7 +117,7 @@ if(checkmailfirmas($correoo)){
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
 												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
 													window.open('http://192.168.33.10/exitoInmobiliario/formulario3.html','_blank' ); 
-												}); </script></div>";
+												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
 			                }
 
 			    else{
@@ -129,6 +138,14 @@ else {
 	echo "<div id='AjaxAct'>
 											<script>sweetAlert({title:'Error',text:'El campo nombre debe ser texto ',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>"; 
 }
+}
+else{
+
+	    echo "<div id='AjaxAct'> 
+							 	<script>sweetAlert({title:'Error',text:'Este e-mail ya existe en nuestra base de datos',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
+							 	echo   mysqli_error($db);
+
+	 }
 
 	
 
@@ -137,9 +154,10 @@ else {
 else{
 
 	    echo "<div id='AjaxAct'> 
-							 	<script>sweetAlert({title:'Error',text:'Este e-mail ya está en nuestra base de datos o es incorrecto',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
+							 	<script>sweetAlert({title:'Error',text:'Este e-mail es incorrecto',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
 	 }
 }
+
 		
 else{
 	echo "<div id='AjaxAct'>
