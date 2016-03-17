@@ -17,19 +17,10 @@ i.fa.fa-check{color: #ffaf04}
 .navbar-default .navbar-toggle:hover .icon-bar {background-color: #3BA3D8 !important; }
 .navbar-fixed-top {background-color: rgb(53, 157, 208) !important; position: fixed !important; opacity: 0.9;min-height: 35px;}
 nav.navbar {transition: all 1.2s ease; }
-.navbar-fixed-gone{top:-100px; position: fixed !important;}
 .container {width: 900px !important;}
 
-.navbar img{
-	transition: all 1.2s ease; 
-}
-
-.navbar-fixed-top img{
-    height: 70px;
-    margin-top: 10px;
-    transition: all 1.2s ease;
-    margin-left: 40px;
-}
+.navbar img{transition: all 1.2s ease; }
+.navbar-fixed-top img{height: 70px; margin-top: 10px; transition: all 1.2s ease; margin-left: 40px; }
 
 /*MENU*/
 header{position: relative;}
@@ -41,7 +32,7 @@ header{position: relative;}
 
 /*CARRUSEL INICIO*/
 .carousel-control.right, .carousel-control.left {z-index: 10;}
-.sliderForm {position: absolute; top: 0px; width: 100%;box-shadow: inset 1px 1px 1px 1000px rgba(0, 137, 206, 0.8);}
+.sliderForm {position: absolute; top: 0px;height: 552px; width: 100%;box-shadow: inset 1px 1px 1px 1000px rgba(0, 137, 206, 0.8);}
 
 /*Bootstrap*/
 .panel-default>.panel-heading+.panel-collapse>.panel-body {font-size: 17px; } .panel{border: none;}
@@ -100,7 +91,7 @@ li.whiteFont {font-size: 20px; }
 /*.blueBg{background-color: #0089ce;}*/
 .beneficiosBg{background:url('../img/banner.jpg') center center no-repeat;box-shadow: inset 1px 1px 1px 1000px rgba(0, 137, 206, 0.8);background-size: cover;}
 .whiteBg{background-color: #FFFFFF;}
-.brownBg{background:url('../img/auditorio.jpg') center center no-repeat;box-shadow: inset 1px 1px 1px 1000px rgba(206, 162, 0, 0.8);background-size: cover;padding: 100px;}
+.brownBg{background:url('../img/auditorio.jpg') center center no-repeat;box-shadow: inset 1px 1px 1px 1000px rgba(206, 162, 0, 0.8);background-size: cover;padding: 100px 0;}
 .blueBg{box-shadow: inset 1px 1px 1px 1000px rgba(0, 137, 206, 0.8);}
 .blueBg img {margin-top: -226px; }
 .lightGreyBg .container{background-color: #FFFFFF;padding: 35px 0px;margin-top: -40px;margin-bottom: -40px;}
@@ -138,6 +129,10 @@ footer .text-right{font-size: 18px;}
 .container {width: 900px !important;}
 footer{background-color: blue !important;}
 .sliderExito img {max-width: inherit !important; width: 120% !important; }
+.blackFontRecover {margin-top: 50px; }
+#tituloConocimientos img {margin-bottom: -29px; max-width: 412px; width: 104%; }
+.blackFontRecover {font-size: 31px; }
+.yellowButton {margin-left: -39px; }
 }
 
 @media (max-width: 1024px){
@@ -147,7 +142,18 @@ form .container {width: 970px; }
 .sliderExito img {max-width: inherit; width: 100%; }
 .container {width: 900px !important;}
 footer{background-color: yellow !important;}
-}
+.blackFontRecover {font-size: 31px; }
+.brownBg {padding: 100px 0px; }
+h1 {font-size: 50px; }
+.yellowFontYa {font-size: 70px; }
+.yellowFontComienza {font-size: 30px; }
+.textCenterForm {font-size: 20px; }
+.form-control {height: 34px; font-size: 17px; }
+.greenButton {font-size: 19px; }
+h2 {font-size: 30px; }
+.fa-2x {font-size: 1em; }
+.blueButtonDos {font-size: 20px; padding: 6px 37px; margin-left: 64px; margin-top: 17px;}
+.whiteFontAparta {font-size: 34px; }
 
 @media (max-width: 990px){
 .sliderExito img {width: 190%; max-width: inherit !important; }
@@ -161,6 +167,7 @@ h1 {font-size: 28px; }
 .greenButton {font-size: 16px; }
 .carousel-indicators li{display: none;}
 .container {width: 768px !important;}
+footer{background-color: red !important;}
 }
 
 @media (max-width: 767px){
