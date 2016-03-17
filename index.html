@@ -254,19 +254,12 @@
 		$('#Informacion').click(function() {
 				$('body').scrollTo('#tituloInformacion', 800);
 		});
-          $(window).on("scroll", function() {
-         if ($(this).scrollTop() < 460) {
-           $("#exitoMenu").addClass("navbar-fixed-gone");
-         } else {
-           $("#exitoMenu").removeClass("navbar-fixed-gone");
-         }
-    });
 
       $(window).on("scroll", function() {
          if ($(this).scrollTop() > 460) {
            $("#exitoMenu").addClass("navbar-fixed-top");
          } else {
-           $("#exitoMenu").removeClass("navbar-fixed-gone");
+           $("#exitoMenu").removeClass("navbar-fixed-top");
          }
     });
     </script>
@@ -326,10 +319,6 @@
            })
        }) ;
     </script>
-
-
-
-
 
   </body>
 </html>
