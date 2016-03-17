@@ -33,9 +33,10 @@ header{position: relative;}
 /*CARRUSEL INICIO*/
 .carousel-control.right, .carousel-control.left {z-index: 10;}
 .sliderForm {position: absolute; top: 0px;height: 552px; width: 100%;box-shadow: inset 1px 1px 1px 1000px rgba(0, 137, 206, 0.8);}
+.carousel-inner>.item>img {line-height: 1; height: 552px; width: 100%; }
 
 /*Bootstrap*/
-.panel-default>.panel-heading+.panel-collapse>.panel-body {font-size: 17px; } .panel{border: none;}
+.panel-default>.panel-heading.panel-collapse>.panel-body {font-size: 17px; } .panel{border: none;}
 .panel-default>.panel-heading {background-color: #F2F2F2; }
 .panel-title span {background-color: #FFAF04; width: 25px; height: 25px; border-radius: 50%; display: inline-block; text-align: center; padding-top: 4px; margin-right: 10px; color: #fff; }
 .form-control {margin-bottom: 15px;border-radius: 0px; box-shadow: none; height: 47px;font-size: 20px;}
@@ -133,10 +134,12 @@ footer{background-color: blue !important;}
 #tituloConocimientos img {margin-bottom: -29px; max-width: 412px; width: 104%; }
 .blackFontRecover {font-size: 31px; }
 .yellowButton {margin-left: -39px; }
+.sliderForm {height: 460px; }
+.carousel-inner>.item>img {height: 459px; }
 }
 
 @media (max-width: 1024px){
-.sliderForm {top: 23px;}
+.sliderForm {top: 0px;}
 .btn-default:hover {color: #A3DB63; background-color: #FFFFFF;}
 form .container {width: 970px; }
 .sliderExito img {max-width: inherit; width: 100%; }
@@ -162,12 +165,50 @@ a.navbar-brand{height: 0px;}
 .navbar-nav>li>a {padding-top: 15px; }
 h1 {font-size: 28px; }
 .navbar-brand>img {height: 53px; }
-.sliderForm {top: -6px; }
+.sliderForm {top: 0px;height: 431px; }
 .textCenterForm {font-size: 21px; }
 .greenButton {font-size: 16px; }
 .carousel-indicators li{display: none;}
 .container {width: 768px !important;}
 footer{background-color: red !important;}
+a#Informacion {margin-right: 50px !important; }
+.yellowFontComienza {font-size: 25px !important; }
+.textCenterForm {font-size: 16px !important; }
+.form-control {font-size: 15px; }
+#Name1, #Email1 {height: 35px; font-size: 15px; width: 80%; }
+.greenButton {padding: 6px 47px; font-size: 16px !important; margin: 0; }
+.navbar-default .navbar-nav>li>a {font-size: 12px; }
+.tituloInmobil {font-size: 40px; }
+.yellowFontYa {font-size: 50px; line-height: 0.6; }
+.container {width: 736px !important; }
+.lightGreyBg h2 {padding-bottom: 0px; }
+h2 {font-size: 25px; }
+.objetivoFont {font-size: 20px; }
+.textCenterExitoso {font-size: 25px; }
+iframe.videoYoutube {height: 190px; }
+.experienceFont {font-size: 20px; }
+.blueButton {font-size: 20px; padding: 8px 35px; margin-top: 0px; }
+.blackFont {font-size: 16px; }
+.blackFontRecover {font-size: 23px; }
+.yellowButton {font-size: 17px; padding: 9px 37px; }
+#tituloConocimientos img {margin-bottom: -21px; width: 105%; }
+.fa-2x {font-size: 1em !important; }
+li.whiteFont {font-size: 17px; }
+.textCenterSize {font-size: 15px; }
+.textSatisfaction {font-size: 16px; }
+.greenButtonDos {padding: 6px 41px; font-size: 18px; }
+.blueButtonDos {font-size: 17px; padding: 6px 24px; }
+.whiteFontAparta {font-size: 28px; }
+.whiteFontBegin {font-size: 27px; }
+.whiteFontFree {font-size: 20px; }
+.whiteFontFreedom {font-size: 25px; }
+#Name2, #Email2 {height: 35px; font-size: 16px; margin-top: 2px; }
+.greenButtonDos {padding: 6px 24px; font-size: 17px; }
+footer .text-left {font-size: 13px; }
+footer .text-right {font-size: 13px; }
+footer {padding: 14px 27px; }
+.carousel-inner>.item>img {height: 430px; }
+.lightGreyBg {background-color: #FFFFFF; }
 }
 
 @media (max-width: 767px){
@@ -178,27 +219,105 @@ footer{background-color: red !important;}
 section.Carrusel {display: none; }
 .navbar-nav {background-color: #3BA3D8; font-size: 18px; }
 .container {width: 601px !important;}
+footer{background-color: pink !important;}
+.transformarh1 {text-align: center; border-right: 0px; padding-right: 0px; margin-top: 35px; }
+.yellowFontComienza {margin-top: 0px; }
+.textCenterForm {font-size: 18px !important; text-align: center; }
+.form-control {display: block; margin: 13px auto; }
+#Name1, #Email1 {width: 55%; }
+.greenButton {margin: 0 auto; }
+iframe.videoYoutube {height: 237px; width: 74%; display: block; margin: 0 auto; }
+.blackFont {margin-top: 15px; }
+.experienceFont {text-align: center; }
+.blueButton {margin: 0px auto; display: block; }
+.yellowButton {margin-left: 0px; margin: 0 auto; display: block; }
+#tituloConocimientos img {display: none; }
+#tituloConocimientos {padding-bottom: 50px; }
+h2 {font-size: 22px; }
+#carlosNava img {width: 40% !important; display: block; margin: 0 auto; }
+.yellowFontCarlos {text-align: center; }
+.textCenterSize {text-align: justify; }
+.textSatisfaction {text-align: justify; }
+.blueButtonDos {margin-left: 0px; margin: 0 auto; display: block; margin-top: 0px; }
+.brownBg {padding: 50px 0px; }
+.whiteFontAparta {text-align: center; }
+.whiteFontBegin {font-size: 24px; }
+.whiteFontFree {font-size: 17px; }
+#Name2, #Email2 {width: 50%; display: block; margin: 13px auto; }
+.container {width: 570px !important; }
+.navbar-fixed-top img {height: 31px !important; margin-top: 0px; margin-left: 25px; }
+.navbar-brand>img {height: 41px; }
+.sliderForm {height: 490px; }
 }
 
 @media(max-width: 600px){
 	.container {width: 480px !important;}
 	.sliderForm {background-color: #3BA3D8;}
 	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
+	footer{background-color: black !important;}
+	.container {width: 450px !important; }
+	.sliderForm {height: 520px; }
+	iframe.videoYoutube {height: 175px; }
+	.beneficiosBg {background: none; }
+	.brownBg {background: none; }
 }
 
 @media (max-width: 480px){
-	.container {width: 400px !important; }
+	.container {width: 290px !important; }
 	.sliderForm {background-color: #3BA3D8;}
 	#Knowledge {font-size: 32px; }
 	h2 {font-size: 29px; }
 	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
 	.navbar-default .navbar-nav>li>a {padding-bottom: 40px; }
+	footer{background-color: purple !important;}
+	.tituloInmobil {font-size: 30px; }
+	.yellowFontYa {font-size: 35px; }
+	#Name1, #Email1 {width: 75%; }
+	.greenButton {padding: 6px 20px; }
+	.sliderForm {height: 550px; }
+	h2 {font-size: 20px; }
+	.objetivoFont {font-size: 16px; }
+	.textCenterExitoso {font-size: 21px; }
+	iframe.videoYoutube {height: 113px; }
+	.experienceFont {font-size: 17px; }
+	.blueButton {font-size: 15px; padding: 4px 16px; }
+	.blackFontRecover {font-size: 18px; }
+	.yellowButton {font-size: 14px; }
+	li.whiteFont {font-size: 14px; }
+	.textSatisfaction {font-size: 15px; }
+	.greenButtonDos {font-size: 14px; }
+	.whiteFontAparta {font-size: 24px; }
+	.blueButtonDos {font-size: 14px; padding: 6px 14px; }
+	.whiteFontBegin {font-size: 21px; }
+	.whiteFontFree {font-size: 15px; }
+	.whiteFontFreedom {font-size: 22px; }
+	#Name2, #Email2 {width: 81%; }
+	footer .text-right {font-size: 9px; }
+	footer .text-left {font-size: 9px; }
+	footer {padding: 6px 10px; }
+	li.whiteFont {margin-left: -35px; }
 }
 
 @media(max-width: 320px){
-	.container {width: 320px !important; }
+	.container {width: 290px !important; }
 	h2 {font-size: 25px; }
 	#Knowledge {font-size: 28px; }
 	.blueBg {background: none;}
 	.navbar-nav {background-color: #3BA3D8; font-size: 18px; }
+	footer{background-color: deepskyblue !important;}
+	h1 {font-size: 25px; }
+	.tituloInmobil {font-size: 27px; }
+	.yellowFontYa {font-size: 30px; }
+	.yellowFontComienza {font-size: 20px !important; }
+	.textCenterForm {font-size: 16px !important; }
+	h2 {font-size: 20px; }
+	.textCenterExitoso {font-size: 20px; }
 }
+
+
+
+
+
+
+
+
