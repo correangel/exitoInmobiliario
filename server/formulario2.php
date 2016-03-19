@@ -92,10 +92,20 @@ if(isset($_POST['nomb']) && !empty($_POST['nomb']) AND
 
 $nombb = mysqli_real_escape_string($db,$_POST['nomb']);
 $corre = mysqli_real_escape_string($db,$_POST['corr']);
+$hash = sha1(rand(0,1000));
 $longno = strlen ($nombb);
+$query = "SELECT `correo` FROM Formulario2 WHERE `correo` = '$corre';";
+$result = mysqli_query($db, $query); 
 
 
 if(checkmailf2($corre)){
+
+if(mysqli_num_rows($result) == 0){
+
+
+
+
+
     if(!is_numeric($nombb))
     {
     	if($longno > 3)
@@ -103,14 +113,14 @@ if(checkmailf2($corre)){
 
 
 
-				$sql="INSERT INTO Formulario2(`id`, `nombre`,`correo`) VALUES
-				('','$nombb','$corre')";
+				$sql="INSERT INTO Formulario2(`id`, `nombre`,`correo`,`hash`) VALUES
+				('','$nombb','$corre','$hash')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f2').reset(); </script> 
 												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/formulario3.html','_blank' ); 
+													window.open('http://192.168.33.10/exitoInmobiliario/server/Formulario3Verifya.php','_blank' ); 
 												}); </script></div>";//En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
 			                }
 
@@ -132,6 +142,15 @@ else {
 	echo "<div id='AjaxAct'>
 											<script>sweetAlert({title:'Error',text:'El campo nombre debe ser texto ',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>"; 
 }
+}
+else{
+
+	    echo "<div id='AjaxAct'> 
+							 	<script>sweetAlert({title:'Error',text:'Este e-mail ya existe en nuestra base de datos',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
+							 	echo   mysqli_error($db);
+
+	 }
+
 
 	
 
@@ -142,6 +161,7 @@ else{
 	    echo "<div id='AjaxAct'> 
 							 	<script>sweetAlert({title:'Error',text:'Error mail invalido',confirmButtonColor:'#F06060',type:'error'}); </script></div>";
 	 }
+
 }
 		
 else{

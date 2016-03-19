@@ -68,6 +68,7 @@ require 'phpmailer/class.pop3.php';
 	    */
 
 
+
 function  checkmailf1($correoo){
 if(preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$correoo))
 {
@@ -88,6 +89,7 @@ if(isset($_POST['nombre']) && !empty($_POST['nombre']) AND
 
 $nomm = mysqli_real_escape_string($db,$_POST['nombre']);
 $correoo = mysqli_real_escape_string($db,$_POST['correo']);
+$hash = sha1(rand(0,1000));
 $longnom = strlen ($nomm);
 $query = "SELECT `correo` FROM Formulario1 WHERE `correo` = '$correoo';";	
 $result = mysqli_query($db, $query); 
@@ -109,14 +111,14 @@ if(mysqli_num_rows($result) == 0){
 
 
 
-				$sql="INSERT INTO Formulario1(`id`, `nombre`,`correo`) VALUES
-				('','$nomm','$correoo')";
+				$sql="INSERT INTO Formulario1(`id`, `nombre`,`correo`,`hash`) VALUES
+				('','$nomm','$correoo','$hash')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
 												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/formulario3.html','_blank' ); 
+													window.open('http://192.168.33.10/exitoInmobiliario/server/Formulario3Verifya.php','_blank' ); 
 												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
 			                }
 
