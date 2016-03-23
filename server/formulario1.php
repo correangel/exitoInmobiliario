@@ -168,14 +168,15 @@ if(mysqli_num_rows($result) == 0){
 
 
 
-				$sql="INSERT INTO Formulario(`id`, `nombre`,`correo`,`hash`) VALUES
-				('','$nomm','$correoo','$hash')";
+				$sql="INSERT INTO Formulario(`id`, `nombre`,`correo`,`hash`,`status`) VALUES
+				('','$nomm','$correoo','$hash','0')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
+							<script>document.getElementById('f2').reset(); </script> 
 												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/cuestionarioVerify.php?correo=$correoo&hash=$hash&nombre=$nomm','_blank' ); 
+													window.open('http://192.168.33.10/exitoInmobiliario/Exitoform/respuesta.php?correo=$correoo&hash=$hash&nombre=$nomm','_blank' ); 
 												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
                                                
 
