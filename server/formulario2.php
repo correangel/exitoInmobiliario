@@ -94,7 +94,7 @@ $nombb = mysqli_real_escape_string($db,$_POST['nomb']);
 $corre = mysqli_real_escape_string($db,$_POST['corr']);
 $hash = sha1(rand(0,1000));
 $longno = strlen ($nombb);
-$query = "SELECT `correo` FROM Formulario2 WHERE `correo` = '$corre';";
+$query = "SELECT `correo` FROM Formulario WHERE `correo` = '$corre';";
 $result = mysqli_query($db, $query); 
 
 
@@ -113,7 +113,7 @@ if(mysqli_num_rows($result) == 0){
 
 
 
-				$sql="INSERT INTO Formulario2(`id`, `nombre`,`correo`,`hash`) VALUES
+				$sql="INSERT INTO Formulario(`id`, `nombre`,`correo`,`hash`) VALUES
 				('','$nombb','$corre','$hash')";
 			    $saveDB = mysqli_query($db, $sql);
 				if($saveDB){

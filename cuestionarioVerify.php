@@ -3,23 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Formulario 3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+            <!-- Custom Fonts -->
+            <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
 </head>
-            
+<?php 
+require 'server/connectdb.php';
 
-
-            <?php 
-                    require 'connectdb.php';
-                    if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) && !empty($_GET['hash'])){ 
+if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) && !empty($_GET['hash'])){ 
                          $hash = $_GET['hash'];
                          $correoo = $_GET['correo'];
                          $nomm = $_GET['nombre'];
-                         $sql = "SELECT `correo`, `hash` FROM Formulario1 WHERE `correo` = '$correoo' AND `hash`='$hash';";
+                         $sql = "SELECT `correo`, `hash` FROM Formulario  WHERE `correo` = '$correoo' AND `hash`='$hash';";
                          $result = mysqli_query($db, $sql); 
 
                             if(mysqli_num_rows($result) == 1)
+                            {
 
 
-                                {?>
+
+?>
+
+            
+
 
 
 <body id="page-top" class="mailResponse">
@@ -28,8 +42,8 @@
                                 <div class="container whiteBg">
                                     <div class="intro-text">
                                         <div class="col-xs-12">
-                                            <form id="f3" class="infoForm row">
-                                                <h2><b><?php echo $nomm ?></b>, GRACIAS POR TU INTERÉS</h2>
+                                            <form id="cuestion" class="infoForm row">
+                                                <h2><b> <?php echo $nomm ?> </b>, GRACIAS POR TU INTERÉS</h2>
                                                 <p class="textResponse">Proporciónanos los siguientes datos para sugerirte una membresía a tu medida</p>
                                                 <input name="f3" value="form2" type="text" hidden>
                                                 <div class="col-sm-4">
@@ -67,14 +81,29 @@
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <input name="ocho" class="form-control" placeholder="¿Cuál es la razón principal por la que estás interesado en incursionar en bienes raíces?">
+                                                    <br>
+                                                    <br>
                                                         
                                                    
                                                 </div>
                                                  <div class="col-sm-2">
-                                                    <input name="nueve" class="form-control" placeholder="Si alguien te aconsejara invertir $700 dólares en un sistema probado para triplicar tus ingresos por medio de los bienes raíces, tú:">
-                                                        
-                                                   
+                                                   Si alguien te aconsejara invertir $700 dólares en un sistema probado para triplicar tus ingresos por medio de los bienes raíces, tú:
+                                                   <br>
+                                                   <br>
+
+
+                                                   Tienes los recursos financieros para invertir en un entrenamiento de educación financiera que te permita triplicar tus ingresos por medio de los bienes raíces.<input name="nueve" class="form-control" type="radio">
+                                                   <br>
+                                                   <br>
+
+
+
+
+                                                   No cuentas con recursos, pero estás muy interesado y buscarás la manera de conseguir los recursos necesarios para aprender a triplicar tus ingresos en bienes raíces.<input name="nueve" class="form-control" type="radio">
+
                                                 </div>
+                                                <br>
+                                                <br>
                                                 
 
                                                 <div class="col-xs-12 text-center">
@@ -84,8 +113,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                 <?php }  } else{ ?>
                            
-                                    <?php }  } else{ ?>
+                                
                                     <body id="page-top" class="index errorPg">
 
                                     
@@ -100,12 +130,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php } ?>
-
+                                    
+  <?php } ?>
 
 
 
             <div id="AjaxAct"></div>
+
+
+
+
             <footer class="f2foot">
                 <div class="container-fluid">
                     <div class="row">
@@ -139,31 +173,28 @@
               });
              </script>
 
-            <!-- Bootstrap Core JavaScript -->
+             <!-- Bootstrap Core JavaScript -->
             <script src="js/bootstrap.min.js"></script>
 
             <!-- Plugin JavaScript -->
             <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-            <script src="js/classie.js"></script>
-            <script src="js/cbpAnimatedHeader.js"></script>
+            
+           
             <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>       
-            <!-- Contact Form JavaScript -->
-            <script src="js/jqBootstrapValidation.js"></script>
-            <script src="js/contact_me.js"></script>
+          
 
-            <!-- Custom Theme JavaScript -->
-            <script src="js/agency.js"></script>
-            <!-- Formulario -->
+
+            <!--Cuestionario -->
             <script>
                  $(function(){
-                    var form = $('form#f3');
+                    var form = $('form#cuestion');
                     form.submit(function(e){
                         e.preventDefault();
                         dataString = form.serialize();
 
                         $.ajax({
                             type:'POST',
-                            url:'server/Formulario3.php',
+                            url:'server/Cuestionario.php',
                             data: dataString,
                             // beforeSend: function(){
                             //     swal({   title: "Procesando",   
@@ -184,9 +215,4 @@
 
         </body>
 
-        </html>
-
-
-	
-
- 
+        </html> 
