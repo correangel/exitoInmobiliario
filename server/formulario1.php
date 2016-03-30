@@ -59,7 +59,7 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail->Port = 587;
         //$mail->setFrom('cesar@cesarbecker.mx','César Becker');  
         $mail->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //se envia mail  a user desde este (solo se envia) 
-        $mail->addAddress($email,$nombree);
+        $mail->addAddress($email,$nombre);
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
         $mail->Subject = 'Gracias por tu apoyo'; 
@@ -121,7 +121,7 @@ if(mysqli_num_rows($result) == 0){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
 							<script>document.getElementById('f2').reset(); </script> 
-												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true},function(){
+												<script>swal({   title: 'Datos guardados con éxito, te hemos enviado un correo con el link al cuestionario y video.',   text: '¡Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true},function(){
 													window.open('http://192.168.33.10/exitoInmobiliario/cuestionarioExito/respuesta.php?correo=$correoo&hash=$hash&nombre=$nomm','_blank' ); 
 												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
                                                
