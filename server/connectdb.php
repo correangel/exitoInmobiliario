@@ -1,4 +1,5 @@
 <?php 
+
 	$db = mysqli_connect('localhost', '55eabdbec82b', '55eabdbec82bconcepth', 'ExitoBD'); //---- DB Beta ----
 	//$db = mysqli_connect('localhost', 'root', 'root', 'ExitoBD'); --- DB Prueba --- 
 	if(mysqli_connect_errno())

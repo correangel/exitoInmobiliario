@@ -4,15 +4,15 @@ require 'phpmailer/PHPMailerAutoload.php';
 
 
     function enviaMail($nombre,$email,$hash){
-        //Template User general
-        $templateUser = file_get_contents('thankyouCuestion.html');
+        //Template User Cuestionario
+        $templateUser = file_get_contents('MailUserCuestion.html');
         $templateUser = str_replace('%name%', $nombre,$templateUser);
         $templateUser = str_replace('%email%', $email,$templateUser);
         $templateUser = str_replace('%hash%', $hash,$templateUser);
 
        
         //Template Admin
-        $templateAdmin = file_get_contents('nuevaCuestion.html');
+        $templateAdmin = file_get_contents('MailAdminCuestion.html');
         $templateAdmin = str_replace('%name%', $nombre,$templateAdmin);
         $templateAdmin = str_replace('%email%', $email,$templateAdmin);
         $templateAdmin = str_replace('%hash%', $hash,$templateAdmin);
@@ -112,7 +112,7 @@ $hash = sha1(rand(0,1000));
 							echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
 							
 												<script>swal({   title: 'Datos guardados con éxito,te hemos enviado un correo con el link al temario.',   text: '¡Da click en el boton OK para ver el temario!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true}, function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
+													window.open('/exitoInmobiliario/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
 												}); </script></div>";
 						}else{
 							//Error datos duplicados
