@@ -74,26 +74,26 @@ require 'phpmailer/PHPMailerAutoload.php';
 
 
 	
-if (isset($_POST['uno']) && !empty($_POST['uno']) AND
-				   isset($_POST['dos']) && !empty($_POST['dos']) AND
-				   isset($_POST['tres']) && !empty($_POST['tres']) AND
-				   isset($_POST['cuatro']) && !empty($_POST['cuatro']) AND
-				   isset($_POST['cinco']) && !empty($_POST['cinco']) AND
-				   isset($_POST['seis']) && !empty($_POST['seis']) AND
-				   isset($_POST['siete']) && !empty($_POST['siete']) AND
-				   isset($_POST['ocho']) && !empty($_POST['ocho']) AND
-	               isset($_POST['diez'])   && !empty($_POST ['diez']))
+if (isset($_POST['mail']) && !empty($_POST['mail']) AND
+				   isset($_POST['nom']) && !empty($_POST['nom']) AND
+				   isset($_POST['ciudaduser']) && !empty($_POST['ciudaduser']) AND
+				   isset($_POST['tel']) && !empty($_POST['tel']) AND
+				   isset($_POST['conocimientoInmobil']) && !empty($_POST['conocimientoInmobil']) AND
+				   isset($_POST['PrincipalRazon']) && !empty($_POST['PrincipalRazon']) AND
+				   isset($_POST['ObjIngresos']) && !empty($_POST['ObjIngresos']) AND
+				   isset($_POST['MayorObstaculo']) && !empty($_POST['MayorObstaculo']) AND
+	               isset($_POST['OpcionRespuesta'])   && !empty($_POST ['OpcionRespuesta']))
 {	
 
-$correoo = mysqli_real_escape_string($db,$_POST['uno']);
-$dos = mysqli_real_escape_string($db,$_POST['dos']);
-$tres = mysqli_real_escape_string($db,$_POST['tres']);
-$cuatro = mysqli_real_escape_string($db,$_POST['cuatro']);
-$cinco = mysqli_real_escape_string($db,$_POST['cinco']);
-$seis = mysqli_real_escape_string($db,$_POST['seis']);
-$siete = mysqli_real_escape_string($db,$_POST['siete']);
-$ocho = mysqli_real_escape_string($db,$_POST['ocho']);
-$diez = mysqli_real_escape_string($db,$_POST['diez']);
+$correoo = mysqli_real_escape_string($db,$_POST['mail']);
+$dos = mysqli_real_escape_string($db,$_POST['nom']);
+$tres = mysqli_real_escape_string($db,$_POST['ciudaduser']);
+$cuatro = mysqli_real_escape_string($db,$_POST['tel']);
+$cinco = mysqli_real_escape_string($db,$_POST['conocimientoInmobil']);
+$seis = mysqli_real_escape_string($db,$_POST['PrincipalRazon']);
+$siete = mysqli_real_escape_string($db,$_POST['ObjIngresos']);
+$ocho = mysqli_real_escape_string($db,$_POST['MayorObstaculo']);
+$diez = mysqli_real_escape_string($db,$_POST['OpcionRespuesta']);
 
 //$('form#f2 input, form#f2 select').attr('disabled','disabled'); thankYou();
 $hash = sha1(rand(0,1000));
@@ -101,7 +101,7 @@ $hash = sha1(rand(0,1000));
 
 
 
-		$sql1 = "INSERT INTO Cuestionario (`id`,`uno`,`dos`,`tres`,`cuatro`,`cinco`,`seis`,`siete`, `ocho`,`diez`,`status`,`hash`) 
+		$sql1 = "INSERT INTO Cuestionario (`id`,`mail`,`nom`,`ciudaduser`,`tel`,`conocimientoInmobil`,`PrincipalRazon`,`ObjIngresos`, `MayorObstaculo`,`OpcionRespuesta`,`status`,`hash`) 
 			VALUES((SELECT `id` FROM Formulario WHERE `correo` = '$correoo'),'$correoo','$dos','$tres','$cuatro' ,'$cinco','$seis','$siete','$ocho','$diez','1','$hash');";
 
 		$result = mysqli_query($db, $sql1);

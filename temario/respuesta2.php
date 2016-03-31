@@ -31,7 +31,7 @@ require '../server/connectdb.php';
 if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) && !empty($_GET['hash'])){ 
                          $hash = $_GET['hash'];
                          $correoo = $_GET['correo'];
-                         $sql = "SELECT `uno`, `hash` FROM Cuestionario  WHERE `uno` = '$correoo' AND `hash`='$hash';";
+                         $sql = "SELECT `mail`, `hash` FROM Cuestionario  WHERE `mail` = '$correoo' AND `hash`='$hash';";
                          $result = mysqli_query($db, $sql); 
 
                             if(mysqli_num_rows($result) == 1)

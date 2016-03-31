@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.46-0ubuntu0.14.04.2)
 # Database: ExitoBD
-# Generation Time: 2016-03-31 00:17:05 +0000
+# Generation Time: 2016-03-31 19:19:47 +0000
 # ************************************************************
 
 
@@ -27,15 +27,15 @@ DROP TABLE IF EXISTS `Cuestionario`;
 
 CREATE TABLE `Cuestionario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `uno` varchar(50) DEFAULT NULL,
-  `dos` varchar(50) DEFAULT NULL,
-  `tres` varchar(50) DEFAULT NULL,
-  `cuatro` varchar(50) DEFAULT NULL,
-  `cinco` varchar(50) DEFAULT NULL,
-  `seis` varchar(50) DEFAULT NULL,
-  `siete` varchar(50) DEFAULT NULL,
-  `ocho` varchar(50) DEFAULT NULL,
-  `diez` varchar(50) DEFAULT NULL,
+  `mail` varchar(50) DEFAULT NULL,
+  `nom` varchar(50) DEFAULT NULL,
+  `ciudaduser` varchar(50) DEFAULT NULL,
+  `tel` varchar(50) DEFAULT NULL,
+  `conocimientoInmobil` varchar(50) DEFAULT NULL,
+  `PrincipalRazon` varchar(50) DEFAULT NULL,
+  `ObjIngresos` varchar(50) DEFAULT NULL,
+  `MayorObstaculo` varchar(50) DEFAULT NULL,
+  `OpcionRespuesta` varchar(50) DEFAULT NULL,
   `fecha-_registro` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` int(10) DEFAULT NULL,
   `hash` int(40) DEFAULT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `Cuestionario` (
 LOCK TABLES `Cuestionario` WRITE;
 /*!40000 ALTER TABLE `Cuestionario` DISABLE KEYS */;
 
-INSERT INTO `Cuestionario` (`id`, `uno`, `dos`, `tres`, `cuatro`, `cinco`, `seis`, `siete`, `ocho`, `diez`, `fecha-_registro`, `status`, `hash`)
+INSERT INTO `Cuestionario` (`id`, `mail`, `nom`, `ciudaduser`, `tel`, `conocimientoInmobil`, `PrincipalRazon`, `ObjIngresos`, `MayorObstaculo`, `OpcionRespuesta`, `fecha-_registro`, `status`, `hash`)
 VALUES
 	(2,'romano@hotmail.com','erik','erik','erik','erik','erik','erik','erik',NULL,'2016-03-23 19:00:59',1,NULL),
 	(3,'romano@hotmail.com','kjkjk','jk','jk','jk','jkjjkj','kjkjj','jkjkjk',NULL,'2016-03-23 19:01:00',1,NULL),
@@ -163,9 +163,10 @@ VALUES
 	(207,'lopez@gmail.com','mk','mk','mk','mkm','kmkmk','mkmk','kmkm','on','2016-03-30 22:58:21',1,14),
 	(208,'holo@gmail.com','mkm','km','km','mk','mkm','kmkmkmk','mkmkmkmk','Tienes los recursos financieros para invertir en u','2016-03-30 23:02:45',1,97),
 	(209,'notienes@gmail.com','k','k','mk','mk','mkm','km','kmkmkmk','No cuentas con recursos, pero estÃ¡s muy interesad','2016-03-30 23:04:01',1,343),
-	(211,'erikgrl@hotmail.com','erik genaro rodriguez lazcano ','mexico','1234567890','no','por ganar mas dinero','$100,000','falta de clientes','Tienes los recursos financieros para invertir en u','2016-03-30 23:27:08',1,6349),
-	(212,'erik.genaro@gmail.com','babidi','ok','ok','ok','ok','ok','ok','Tienes los recursos financieros para invertir en u','2016-03-30 23:36:26',1,7),
-	(214,'gepo@gmail.com','mkm','km','km','kmk','mk','mk','mk','Tienes los recursos financieros para invertir en u','2016-03-31 00:01:19',1,9);
+	(214,'gepo@gmail.com','mkm','km','km','kmk','mk','mk','mk','Tienes los recursos financieros para invertir en u','2016-03-31 00:01:19',1,9),
+	(216,'temas@consultanos.com','mkm','k','m','km','kmk','mk','mkm','Tienes los recursos financieros para invertir en u','2016-03-31 00:45:04',1,8949),
+	(220,'erik.genaro@gmail.com','erik','erik','9999999999','kkkkk','kkkk','kkkk','kkkk','No cuentas con recursos, pero estÃ¡s muy interesad','2016-03-31 19:08:01',1,89),
+	(222,'erikgrl@hotmail.com','kok','o','kok','oko','kokoko','kokoko','kokoko','Tienes los recursos financieros para invertir en u','2016-03-31 19:18:11',1,733);
 
 /*!40000 ALTER TABLE `Cuestionario` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -363,10 +364,12 @@ VALUES
 	(208,'holo','holo@gmail.com','2016-03-30 23:02:28',4,0),
 	(209,'notienes','notienes@gmail.com','2016-03-30 23:03:45',6,0),
 	(210,'status','status2@gmail.com','2016-03-30 23:13:43',0,0),
-	(211,'erik','erikgrl@hotmail.com','2016-03-30 23:25:01',81755,0),
-	(212,'erik','erik.genaro@gmail.com','2016-03-30 23:35:09',0,0),
 	(213,'erik','testera@gmail.com','2016-03-31 00:00:12',2147483647,0),
-	(214,'gepo','gepo@gmail.com','2016-03-31 00:00:57',5,0);
+	(214,'gepo','gepo@gmail.com','2016-03-31 00:00:57',5,0),
+	(215,'eirk','actual@gmail.com','2016-03-31 00:42:17',3741,0),
+	(216,'tema','temas@consultanos.com','2016-03-31 00:44:38',20,0),
+	(220,'thome','erik.genaro@gmail.com','2016-03-31 19:06:48',0,0),
+	(222,'erik','erikgrl@hotmail.com','2016-03-31 19:16:52',7719,0);
 
 /*!40000 ALTER TABLE `Formulario` ENABLE KEYS */;
 UNLOCK TABLES;

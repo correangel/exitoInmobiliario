@@ -93,42 +93,42 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 
                     <form  id="cuestion"  class="infoForm row">
                     <div class="col-xs-12">
-                        <input type="text" name="uno" class="form-control" readonly="form-control" value ="<?php echo $correoo; ?>">
+                        <input type="text" name="mail" class="form-control" readonly="form-control" value ="<?php echo $correoo; ?>">
                     </div>
 
                     <div class="col-xs-12">
-                        <input type="text" name="dos"  class="form-control" placeholder="Nombre">
+                        <input type="text" name="nom"  class="form-control" placeholder="Nombre">
                     </div>
                     <div class="col-sm-12">
-                        <input type="text" name="tres" class="form-control" placeholder="Ciudad">
-                    </div>
-
-                    <div class="col-sm-12">
-                        <input type="text" name="cuatro" class="form-control" placeholder="Número Telefónico (celular de preferencia)">
+                        <input type="text" name="ciudaduser" class="form-control" placeholder="Ciudad">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="cinco"  class="form-control" placeholder="¿Tienes conocimiento del sector inmobiliario?">
+                        <input type="text" name="tel" class="form-control" placeholder="Número Telefónico (celular de preferencia)">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="seis" class="form-control" placeholder="¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?">
+                        <input type="text" name="conocimientoInmobil"  class="form-control" placeholder="¿Tienes conocimiento del sector inmobiliario?">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="siete" class="form-control" placeholder="¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?">
+                        <input type="text" name="PrincipalRazon" class="form-control" placeholder="¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="ocho" class="form-control" placeholder="¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?">
+                        <input type="text" name="ObjIngresos" class="form-control" placeholder="¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <input type="text" name="MayorObstaculo" class="form-control" placeholder="¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?">
                     </div>
 
                     
 
                     <div  class="col-sm-12">
                             Si alguien te aconsejara a invertir $700  dólares en un sistema probado para triplicar tus ingresos por medio de los bienes raíces, tú:
-                            <br><input type="radio" name="diez" value="Tienes los recursos financieros para invertir en un entrenamiento de educación financiera que te permita triplicar tus ingresos por medio de los bienes raíces."  > "Tienes los recursos financieros para invertir en un entrenamiento de educación financiera que te permita triplicar tus ingresos por medio de los bienes raíces."<br>
-                            <input type="radio" name="diez" value="No cuentas con recursos, pero estás muy interesado y buscarás la manera de conseguirlos para aprender a triplicar tus ingresos en bienes raíces." > "No cuentas con recursos, pero estás muy interesado y buscarás la manera de conseguirlos para aprender a triplicar tus ingresos en bienes raíces."<br>
+                            <br><input type="radio" name="OpcionRespuesta" value="Tienes los recursos financieros para invertir en un entrenamiento de educación financiera que te permita triplicar tus ingresos por medio de los bienes raíces."  > "Tienes los recursos financieros para invertir en un entrenamiento de educación financiera que te permita triplicar tus ingresos por medio de los bienes raíces."<br>
+                            <input type="radio" name="OpcionRespuesta" value="No cuentas con recursos, pero estás muy interesado y buscarás la manera de conseguirlos para aprender a triplicar tus ingresos en bienes raíces." > "No cuentas con recursos, pero estás muy interesado y buscarás la manera de conseguirlos para aprender a triplicar tus ingresos en bienes raíces."<br>
                     </div>
 
                     <div class="col-xs-12 text-center">
