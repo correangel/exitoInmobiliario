@@ -112,7 +112,7 @@ $hash = sha1(rand(0,1000));
 							echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
 							
 												<script>swal({   title: 'Datos guardados con éxito,te hemos enviado un correo con el link al temario.',   text: '¡Da click en el boton OK para ver el temario!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true}, function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/temarioExito/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
+													window.open('http://192.168.33.10/exitoInmobiliario/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
 												}); </script></div>";
 						}else{
 							//Error datos duplicados
