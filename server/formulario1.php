@@ -5,15 +5,16 @@ require 'phpmailer/PHPMailerAutoload.php';
 
 
     function enviaMail($nombre,$email,$hash){
-        //Template User general
-        $templateUser = file_get_contents('thankyoufirmas-2.html');
+
+        //Template User Formulario
+        $templateUser = file_get_contents('MailUserForm.html');
         $templateUser = str_replace('%name%', $nombre,$templateUser);
         $templateUser = str_replace('%email%', $email,$templateUser);
         $templateUser = str_replace('%hash%', $hash,$templateUser);
 
        
         //Template Admin
-        $templateAdmin = file_get_contents('NuevaFirma.html');
+        $templateAdmin = file_get_contents('MailAdminForm.html');
         $templateAdmin = str_replace('%name%', $nombre,$templateAdmin);
         $templateAdmin = str_replace('%email%', $email,$templateAdmin);
         $templateAdmin = str_replace('%hash%', $hash,$templateAdmin);
@@ -29,17 +30,17 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->SMTPSecure = "tls";
         //$mail2->Username = 'cesar@cesarbecker.mx';
         //$mail2->Password = 'Constituyentemx2016';
-        $mail2->Username = 'erik@concepthaus.mx'; //se envia mail  a user desde este (solo se envia)
-        $mail2->Password = 'programacion2016';//se envia mail  a user desde este (solo se envia)
+        $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
+        $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
         //$mail2->setFrom('cesar@cesarbecker.mx','César Becker');
         //$mail2->addAddress('sergio@concepthaus.mx','Sergio Ramos');  
         //$mail2->addAddress('cesar@cesarbecker.mx','César Becker');
-        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez');  //se envia mail  a user desde este (solo se envia)
-        $mail2->addAddress('testergena@gmail.com','Erik Rodriguez'); //aqui llega el mail para el administrador
+        $mail2->setFrom('franquiciasquality@gmail.com','Franquicias');  //se envia mail  a user desde este (solo se envia)
+        $mail2->addAddress('franquiciasquality@gmail.com','Franquicias'); //aqui llega el mail para el administrador
         $mail2->isHTML(true);
         $mail2->CharSet = 'UTF-8';
-        $mail2->Subject = 'Nueva sugerencia'; 
+        $mail2->Subject = 'Nuevo cliente'; 
         $mail2->Body = $templateAdmin;
         $mail2->send();
 
@@ -54,11 +55,11 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail->SMTPSecure = "tls";
         //$mail->Username = 'cesar@cesarbecker.mx';
         //$mail->Password = 'Constituyentemx2016';
-        $mail->Username = 'erik@concepthaus.mx';//se envia mail  a user desde este (solo se envia)
-        $mail->Password = 'programacion2016';//se envia mail  a user desde este (solo se envia)
+        $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
+        $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail->Port = 587;
         //$mail->setFrom('cesar@cesarbecker.mx','César Becker');  
-        $mail->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //se envia mail  a user desde este (solo se envia) 
+        $mail->setFrom('franquiciasquality@gmail.com','Franquicias'); //se envia mail  a user desde este (solo se envia) 
         $mail->addAddress($email,$nombre);
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
@@ -122,7 +123,7 @@ if(mysqli_num_rows($result) == 0){
 							echo "<div id='AjaxAct'><script>document.getElementById('f1').reset(); </script> 
 							<script>document.getElementById('f2').reset(); </script> 
 												<script>swal({   title: 'Datos guardados con éxito, te hemos enviado un correo con el link al cuestionario y video.',   text: '¡Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true},function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/cuestionario/respuesta.php?correo=$correoo&hash=$hash&nombre=$nomm','_blank' ); 
+													window.open('/exitoInmobiliario/cuestionario/respuesta.php?correo=$correoo&hash=$hash&nombre=$nomm','_blank' ); 
 												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
                                                
 
