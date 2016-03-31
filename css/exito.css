@@ -83,7 +83,7 @@ li.whiteFont {font-size: 20px; }
 .trainingSize{font-size: 17px;text-align: center;}
 .trainingStrong{font-weight: 600; font-size: 30px;text-align: center;display: block;}
 .trainingCap{text-transform: capitalize;font-weight: 600; font-size: 30px;text-align: center;display: block;}
-.objetivoFont{font-size: 23px;text-align: center;margin-top: 25px;}
+.objetivoFont{font-size: 23px;text-align: center;margin-top: 25px;font-weight: 500;}
 .unicoFont{text-align: center; font-size: 22px; font-weight: 400;}
 
 /*COLORES FONDO*/
