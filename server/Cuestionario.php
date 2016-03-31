@@ -26,8 +26,6 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-        //$mail2->Username = 'cesar@cesarbecker.mx';
-        //$mail2->Password = 'Constituyentemx2016';
         $mail2->Username = 'erik@concepthaus.mx'; //se envia mail  a user desde este (solo se envia)
         $mail2->Password = 'programacion2016';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
@@ -112,7 +110,7 @@ $hash = sha1(rand(0,1000));
 							echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
 							
 												<script>swal({   title: 'Datos guardados con éxito,te hemos enviado un correo con el link al temario.',   text: '¡Da click en el boton OK para ver el temario!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true}, function(){
-													window.open('/exitoInmobiliario/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
+													window.open('/exitoinm/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
 												}); </script></div>";
 						}else{
 							//Error datos duplicados
