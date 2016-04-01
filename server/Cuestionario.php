@@ -26,17 +26,15 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-        $mail2->Username = 'erik@concepthaus.mx'; //se envia mail  a user desde este (solo se envia)
-        $mail2->Password = 'programacion2016';//se envia mail  a user desde este (solo se envia)
+
+        $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
+        $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        //$mail2->setFrom('cesar@cesarbecker.mx','César Becker');
-        //$mail2->addAddress('sergio@concepthaus.mx','Sergio Ramos');  
-        //$mail2->addAddress('cesar@cesarbecker.mx','César Becker');
-        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez');  //se envia mail  a user desde este (solo se envia)
-        $mail2->addAddress('testergena@gmail.com','Erik Rodriguez'); //aqui llega el mail para el administrador
+        $mail2->setFrom('franquiciasquality@gmail.com','Franquicias');  //se envia mail  a user desde este (solo se envia)
+        $mail2->addAddress('franquiciasquality@gmail.com','Franquicias'); //aqui llega el mail para el administrador
         $mail2->isHTML(true);
         $mail2->CharSet = 'UTF-8';
-        $mail2->Subject = 'Nueva sugerencia'; 
+        $mail2->Subject = 'Nuevo cliente'; 
         $mail2->Body = $templateAdmin;
         $mail2->send();
 
@@ -49,13 +47,10 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls";
-        //$mail->Username = 'cesar@cesarbecker.mx';
-        //$mail->Password = 'Constituyentemx2016';
-        $mail->Username = 'erik@concepthaus.mx';//se envia mail  a user desde este (solo se envia)
-        $mail->Password = 'programacion2016';//se envia mail  a user desde este (solo se envia)
+        $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
+        $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail->Port = 587;
-        //$mail->setFrom('cesar@cesarbecker.mx','César Becker');  
-        $mail->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //se envia mail  a user desde este (solo se envia) 
+        $mail->setFrom('franquiciasquality@gmail.com','Franquicias'); //se envia mail  a user desde este (solo se envia) 
         $mail->addAddress($email,$nombre);
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
@@ -92,8 +87,6 @@ $seis = mysqli_real_escape_string($db,$_POST['PrincipalRazon']);
 $siete = mysqli_real_escape_string($db,$_POST['ObjIngresos']);
 $ocho = mysqli_real_escape_string($db,$_POST['MayorObstaculo']);
 $diez = mysqli_real_escape_string($db,$_POST['OpcionRespuesta']);
-
-//$('form#f2 input, form#f2 select').attr('disabled','disabled'); thankYou();
 $hash = sha1(rand(0,1000));
 
 

@@ -28,14 +28,9 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-        //$mail2->Username = 'cesar@cesarbecker.mx';
-        //$mail2->Password = 'Constituyentemx2016';
         $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
         $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        //$mail2->setFrom('cesar@cesarbecker.mx','César Becker');
-        //$mail2->addAddress('sergio@concepthaus.mx','Sergio Ramos');  
-        //$mail2->addAddress('cesar@cesarbecker.mx','César Becker');
         $mail2->setFrom('franquiciasquality@gmail.com','Franquicias');  //se envia mail  a user desde este (solo se envia)
         $mail2->addAddress('franquiciasquality@gmail.com','Franquicias'); //aqui llega el mail para el administrador
         $mail2->isHTML(true);
@@ -53,12 +48,9 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls";
-        //$mail->Username = 'cesar@cesarbecker.mx';
-        //$mail->Password = 'Constituyentemx2016';
         $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
         $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail->Port = 587;
-        //$mail->setFrom('cesar@cesarbecker.mx','César Becker');  
         $mail->setFrom('franquiciasquality@gmail.com','Franquicias'); //se envia mail  a user desde este (solo se envia) 
         $mail->addAddress($email,$nombre);
         $mail->isHTML(true);
