@@ -34,10 +34,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="Contacto">Contacto</a></li>
             <li><a id="Mision">Misión</a></li>
             <li><a id="Beneficios">Beneficios</a></li>
-            <li><a id="Informacion">Información</a></li>
+            <li><a id="Inscribete">Inscríbete</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -103,6 +102,7 @@
     </section>
   <!--Section Mision-->
   <section class="lightGreyBg" id="tituloMision">
+    <div id="negative"></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -147,6 +147,7 @@
   </section>
   <!--Section Beneficios-->
   <section class="beneficiosBg" id="tituloBeneficios">
+  <div id="negativeUno"></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -169,17 +170,15 @@
       	<img src="img/carlosNava2.jpg">
       </div>
         <div class="col-sm-7">
-          <h2 class="yellowFontCarlos"><span class="blackFontSell">¿Quién es 
-</span> Carlos Nava?</h2>
+          <h2 class="yellowFontCarlos"><span class="blackFontSell">¿Quién </span><span class="es">es </span>Carlos Nava?</h2>
           <p class="textCenterSize"><strong class="transformar"></strong>Durante 15 años se desempeñó como consultor dirigiendo proyectos en empresas líderes en México y Latinoamérica, sin embargo, después de trabajar para otros tuvo la iniciativa de comenzar su propio negocio.
 
-Su interés por los bienes raíces lo impulsó a incursionar en el sector inmobiliario aprovechando su experiencia en negociación, ventas y manejo de equipo. 
+			Su interés por los bienes raíces lo impulsó a incursionar en el sector inmobiliario aprovechando su experiencia en negociación, ventas y manejo de equipo. 
 
-Se asoció con expertos en el sector, lo cual lo ha llevado a lograr un equipo consolidado con un inventario de inmuebles vendibles que le han dado la oportunidad de alcanzar el nivel de vida que siempre aspiró.
+			Se asoció con expertos en el sector, lo cual lo ha llevado a lograr un equipo consolidado con un inventario de inmuebles vendibles que le han dado la oportunidad de alcanzar el nivel de vida que siempre aspiró.
 
-Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, penthouses, oficinas y bodegas industriales en las zonas de mayor plusvalía de la Ciudad de México.</p>
-          <p class="textSatisfaction">“Mi satisfacción más grande es poder servir a las personas y desarrollar profesionales inmobiliarios con resultados extraordinarios que ningún empleo promedio puede darles”..</p>
-          <button type="submit" class="btn btn-default greenButtonDos">CONÓCEME</button>
+			Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, penthouses, oficinas y bodegas industriales en las zonas de mayor plusvalía de la Ciudad de México.</p>
+          <p class="textSatisfaction">“Mi satisfacción más grande es poder servir a las personas y desarrollar profesionales inmobiliarios con resultados extraordinarios que ningún empleo promedio puede darles”.</p>
         </div>
       </div>
     </div>
@@ -204,8 +203,6 @@ Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, pent
   			<div class="col-sm-12">
   				<h3 class="whiteFontBegin">¡Comienza a ganar dinero!</h3>
   				<p class="whiteFontFree">Ingresa tus datos para tener acceso a la serie de videos GRATUITOS del curso <br><strong class="whiteFontFreedom">"Libertad Financiera"</strong></p>
-
-
   				<form id="f2">
                   <div class="col-sm-6">
                     <input name="nombre" type="text" class="form-control" id="Name2" placeholder="Nombre">
@@ -218,9 +215,6 @@ Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, pent
   			</div>
   		</div>
   	</div>
-
-
-
   </section>
   <footer>
     <div class="container">
@@ -243,20 +237,23 @@ Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, pent
 
     <script>
 
-		$('#Contacto').click(function() {
+		$('#Inscribete').click(function() {
 				$('body').scrollTo('#tituloContacto', 800);
 		});
 		$('#Mision').click(function() {
-				$('body').scrollTo('#tituloMision', 800);
-		});
-		$('#Videos').click(function() {
-				$('body').scrollTo('#tituloVideos', 800);
+				$('body').scrollTo('#negative', 800);
 		});
 		$('#Beneficios').click(function() {
-				$('body').scrollTo('#tituloBeneficios', 800);
+				$('body').scrollTo('#negativeUno', 800);
 		});
-		$('#Informacion').click(function() {
-				$('body').scrollTo('#carlosNava', 800);
+		$('.blueButton').click(function() {
+				$('body').scrollTo('#tituloContacto', 800);
+		});
+		$('.yellowButton').click(function() {
+				$('body').scrollTo('#tituloContacto', 800);
+		});
+		$('.blueButtonDos').click(function() {
+				$('body').scrollTo('.blueBg', 800);
 		});
 
 
@@ -325,12 +322,5 @@ Entre su cartera de inmuebles se encuentran terrenos, casas, departamentos, pent
            })
        }) ;
     </script>
-
-
-
-
-
-
-
   </body>
 </html>

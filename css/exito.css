@@ -27,12 +27,13 @@ header{position: relative;}
 .navbar-brand {float: inherit; height: auto; padding: 5px 15px; display: inline-block; }
 #exitoMenu {position: absolute; z-index: 1; width: 100%; background-color: transparent; border: 0; /*border-bottom: 1px solid rgba(255,255,255,0.2);*/ }
 .navbar-nav>li>a {padding-bottom: 30px; padding: 30px 36px;font-size: 16px;}
-.navbar-default .navbar-nav>li>a {color: #FFFFFF; text-transform: uppercase; letter-spacing: 0; font-weight: 400; }
+.navbar-default .navbar-nav>li>a {color: #FFFFFF; text-transform: uppercase; letter-spacing: 0; font-weight: 700; }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:active {color: #ffaf04; }
+#negative, #negativeUno{margin-top: -130px; height: 2px; width: 2px; position: absolute; }
 
 /*CARRUSEL INICIO*/
 .carousel-control.right, .carousel-control.left {z-index: 10;}
-.sliderForm {position: absolute; top: -28px; width: 100%;}
+.sliderForm {position: absolute; top: -28px; width: 100%;right: 20px;}
 
 /*Bootstrap*/
 .panel-default>.panel-heading.panel-collapse>.panel-body {font-size: 17px; } .panel{border: none;}
@@ -62,7 +63,8 @@ h4{color: #ffaf04; font-size: 20px; }
 .yellowFontYa{color: #ffaf04; font-size: 75px;}
 .yellowFontComienza {color: #ffaf04; font-weight: 600; font-size: 35px;text-transform: none; margin-top: 65px;}
 .yellowFontQuieres{text-transform: none;color: #ffaf04;font-weight: 100;}
-.yellowFontCarlos{color: #ffaf04;text-transform: capitalize;text-align: left;}
+.yellowFontCarlos{text-align: left;color: #ffaf04;}
+.normal{text-transform: inherit;}
 .tituloInmobil {font-size: 50px; }
 .whiteFont{color: #FFFFFF}
 .whiteFontAparta{color: #FFFFFF; font-size: 40px;line-height: 1.1;}
@@ -73,7 +75,8 @@ li.whiteFont {font-size: 20px; }
 .blackFont{font-size: 20px; text-align: center; color: #6D6060;line-height: 1.2;}
 .blackFontSpan{font-weight: 600;color: #ffffff;padding-top: 95px;}
 .blackFontRecover{font-size: 38px; text-transform: none;margin-top: 100px;}
-.blackFontSell{font-weight: 100;}
+.blackFontSell{font-weight: 100;color: #ffaf04;text-transform: capitalize;}
+.es{font-weight: 100; color: #ffaf04; text-transform: initial;}
 .blueFont{color: #0089ce;}
 .blueSpan{font-weight: 600;}
 .whiteSpan{color: #ffffff;font-weight: 600;}
@@ -97,7 +100,7 @@ li.whiteFont {font-size: 20px; }
 .lightGreyBg .container{background-color: #FFFFFF;padding: 35px 0px;margin-top: -40px;margin-bottom: -40px;}
 .lightGreyBg{background-color: #f2f2f2;}
 #tituloConocimientos img{margin-bottom: -33px; max-width: 518px; width: 103%;}
-#carlosNava img {width: 100% !important; max-width: 450px !important; border-radius: 50% !important; }
+#carlosNava img {width: 100% !important; max-width: 450px !important; border-radius: 50% !important; margin-top: 100px;}
 .lightGreyBg h2 {padding-bottom: 24px; }
 .panel-title {font-size: 22px; }
 .transformar{text-transform: uppercase;}
@@ -122,7 +125,7 @@ footer .text-right{font-size: 18px;}
 /*MEDIA QUERIES*/
 
 @media (min-width: 852px){
-#Informacion {margin-right: 120px !important; }
+#Inscribete {margin-right: 120px !important; }
 }
 
 @media (max-width: 1200px){
@@ -206,6 +209,7 @@ footer .text-left {font-size: 13px; }
 footer .text-right {font-size: 13px; }
 footer {padding: 14px 27px;}
 .lightGreyBg {background-color: #FFFFFF; }
+#negative, #negativeUno {margin-top: -105px; }
 }
 
 @media (max-width: 767px){
@@ -244,6 +248,7 @@ h2 {font-size: 22px; }
 .navbar-fixed-top img {height: 31px !important; margin-top: 0px; margin-left: 25px; }
 .navbar-brand>img {height: 41px; }
 .sliderForm {height: 490px; }
+#negative, #negativeUno {margin-top: -90px; }
 }
 
 @media(max-width: 600px){
