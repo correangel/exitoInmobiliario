@@ -120,7 +120,7 @@ if(mysqli_num_rows($result) == 0){
 							//enviaMail($correoo,$nomm);
 							echo "<div id='AjaxAct'><script>document.getElementById('f2').reset(); </script> 
 												<script>swal({   title: 'Datos Guardados con exito',   text: 'Da click en el boton OK para ver el video!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: false},function(){
-													window.open('http://192.168.33.10/exitoInmobiliario/server/Formulario3Verifya.php','_blank' ); 
+													window.open('/exitoinm/server/Formulario3Verifya.php','_blank' ); 
 												}); </script></div>";//En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
 			                }
 
