@@ -59,7 +59,8 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 					    <div class="panel-heading" role="tab" id="headingOne">
 					      <h4 class="panel-title">
 					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					          Día 1
+					          Día 1<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+					        </a>
 					        </a>
 					      </h4>
 					    </div>
@@ -128,7 +129,8 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 					    <div class="panel-heading" role="tab" id="headingTwo">
 					      <h4 class="panel-title">
 					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					          Día 2
+					          Día 2<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+					        </a>
 					        </a>
 					      </h4>
 					    </div>
