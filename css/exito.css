@@ -209,6 +209,7 @@ footer .text-left {font-size: 13px; }
 footer .text-right {font-size: 13px; }
 footer {padding: 14px 27px;}
 .lightGreyBg {background-color: #FFFFFF; }
+#negative, #negativeUno {margin-top: -105px; }
 }
 
 @media (max-width: 767px){
@@ -247,6 +248,7 @@ h2 {font-size: 22px; }
 .navbar-fixed-top img {height: 31px !important; margin-top: 0px; margin-left: 25px; }
 .navbar-brand>img {height: 41px; }
 .sliderForm {height: 490px; }
+#negative, #negativeUno {margin-top: -90px; }
 }
 
 @media(max-width: 600px){
