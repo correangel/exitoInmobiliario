@@ -72,7 +72,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                 </button>
                 <a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
             </div>
-            <h1>¡Exito Inmobiliario Ya!</h1>
+            <h1>¡Éxito Inmobiliario Ya!</h1>
 
             
             <!-- /.navbar-collapse -->
@@ -88,7 +88,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
             </div>
             <div class="col-md-7">
                 
-                    <h2 class="text-left"><b style= "text-transform: uppercase;">  <?php echo $nomm ?> </b>,GRACIAS POR <b>TU INTERÉS</b></h2>
+                    <h2 class="text-left"><b style= "text-transform: uppercase;">  <?php echo $nomm ?></b>, GRACIAS POR <b>TU INTERÉS</b></h2>
                     <p class="textResponse">Proporciónanos los siguientes datos para sugerirte una membresía a tu medida:</p>
 
                     <form  id="cuestion"  class="infoForm row">
