@@ -13,7 +13,7 @@ a:active,
 a.active {
     color: #fec503
 }
-.col-sm-12 {color: black; }
+.col-sm-12 {color: #999999; font-weight: 100 !important; }
 h1{text-align: center; }
 h1,
 h2,

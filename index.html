@@ -305,12 +305,12 @@
                    type:'POST',
                    url:'server/formulario1.php',
                    data: dataString,
-                  /*beforeSend: function(){
+                  beforeSend: function(){
                       swal({   title: "Espera...",   
                                text: "Estamos validando tus datos.", 
                                  timer: 7000,
                                showConfirmButton: false });
-                   },*/
+                   },
                    success:function(data){
                        jQuery('#AjaxAct').replaceWith(data);
                    },
