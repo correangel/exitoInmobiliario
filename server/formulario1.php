@@ -31,8 +31,8 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
         $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        $mail2->setFrom('franquiciasquality@gmail.com','Franquicias');  //se envia mail  a user desde este (solo se envia)
-        $mail2->addAddress('franquiciasquality@gmail.com','Franquicias'); //aqui llega el mail para el administrador
+        $mail2->setFrom('franquiciasquality@gmail.com','Exito Inmmobiliario');  //se envia mail  a user desde este (solo se envia)
+        $mail2->addAddress('franquiciasquality@gmail.com','Exito Inmobiliario'); //aqui llega el mail para el administrador
         $mail2->isHTML(true);
         $mail2->CharSet = 'UTF-8';
         $mail2->Subject = 'Nuevo cliente'; 
@@ -51,7 +51,7 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
         $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail->Port = 587;
-        $mail->setFrom('franquiciasquality@gmail.com','Franquicias'); //se envia mail  a user desde este (solo se envia) 
+        $mail->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario'); //se envia mail  a user desde este (solo se envia) 
         $mail->addAddress($email,$nombre);
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
