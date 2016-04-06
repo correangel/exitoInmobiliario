@@ -75,7 +75,7 @@ li.whiteFont {font-size: 20px; }
 .blackFont{font-size: 20px; text-align: center; color: #6D6060;line-height: 1.2;}
 .blackFontSpan{font-weight: 600;color: #ffffff;padding-top: 95px;}
 .blackFontRecover{font-size: 38px; text-transform: none;margin-top: 100px;}
-.blackFontSell{font-weight: 100;color: #ffaf04;text-transform: capitalize;}
+.blackFontSell{font-weight: 100;color: #ffaf04;text-transform: initial;}
 .es{font-weight: 100; color: #ffaf04; text-transform: initial;}
 .blueFont{color: #0089ce;}
 .blueSpan{font-weight: 600;}
