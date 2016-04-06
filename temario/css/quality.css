@@ -988,9 +988,10 @@ body.errorPg {
 }
 .floatBg {
     position: absolute;
-    top: 25%;
+    top: 35%;
+    left: 110px;
     bottom: 50%;
-    margin: 0 auto;
+    max-width: 1066px !important;
 }
 .floatBg .intro-text h2 {
     font-size: 40px;

@@ -178,10 +178,9 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 
                                     
                                     <div class="container floatBg">
-                                            <div class="intro-text">
+                                    	<div class="intro-text">
+                                    		<div class="col-xs-12">
                                             	<div class="row">
-                                                	<div class="col-xs-12">
-                                                    
                                                         <h2>LO SENTIMOS, <b>NO TIENES ACCESO A ESTA PAGINA</b></h2>
                                                         <p class="textResponse">Inténtalo de nuevo, o regresa a la <a href="/exitoInmobiliario/">página principal</a></p>
                                                         
