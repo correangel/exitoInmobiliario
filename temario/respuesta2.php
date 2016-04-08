@@ -64,7 +64,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 					        </a>
 					      </h4>
 					    </div>
-					    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					      <div class="panel-body">
 					        <table class="table">
 							    <thead>
@@ -173,7 +173,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
     			<div class="box">
 				  <button class="paypal-button">
 				    <span class="paypal-button-title">
-				      Comprar ahora con
+				      Pagar ahora con
 				    </span>
 				    <span class="paypal-logo">
 				      <i>Pay</i><i>Pal</i>
