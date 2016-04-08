@@ -119,6 +119,8 @@ if(mysqli_num_rows($result) == 0){
 												}); </script></div>"; //En este script de swal incrustamos otro de jquery para direccionar a otra pagina.
                                                
 
+                                               //poner inm
+
 			                }
 
 			    else{
