@@ -167,7 +167,20 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 					  </div>
 					</div>
     			</div>
-    			<button type="submit" class="btn btn-default greenButton">Pagar ahora</button>
+    			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="V5HHQJUYNHX5Y">
+    			<div class="box">
+				  <button class="paypal-button">
+				    <span class="paypal-button-title">
+				      Comprar ahora con
+				    </span>
+				    <span class="paypal-logo">
+				      <i>Pay</i><i>Pal</i>
+				    </span>
+				  </button>
+				</div>
+				</form>
     		</div>
     	</div>
     </section>
