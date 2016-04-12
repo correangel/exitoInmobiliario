@@ -182,6 +182,14 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 				</div>
 				</form>
     		</div>
+    		<div class="col-sm-12">
+    		<h5>Ó puedes depositar en el siguiente numero de cuenta:</h5>
+    			<p>
+    				Banco: Bancomer<br>
+					No de cuenta: 165007348<br>
+					Cuenta Clabe: 01218000165007348 8
+    			</p>
+    		</div>
     	</div>
     </section>
 
