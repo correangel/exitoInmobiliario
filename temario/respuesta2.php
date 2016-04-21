@@ -71,54 +71,50 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 							      <tr>
 							        <th>Horario</th>
 							        <th>Tema</th>
-							        <th>Expositor</th>
+							        
 							      </tr>
 							    </thead>
 							    <tbody>
 							      <tr>
 							        <td>9:00 - 9:30</td>
 							        <td>Registro</td>
-							        <td></td>
+							        
 							      </tr>
 							      <tr>
 							        <td>9:30 - 10:00</td>
 							        <td>Introducción al Corretaje</td>
-							        <td>Carlos Nava</td>
+							        
 							      </tr>
 							      <tr>
 							        <td>10:01 - 11:30</td>
 							        <td>Módulo 1: Proceso de Venta de un inmueble</td>
-							        <td>Carlos Nava</td>
+							        
 							      </tr>
 							      <tr>
 							        <td>11:31 - 13:00</td>
 							        <td>Modulo 2: Mercado de Compradores</td>
-							        <td>Carlos Nava</td>
+							        
 							      </tr>
 							      <tr>
 							        <td>13:00 - 14:00</td>
 							        <td>Tips para Exclusivar</td>
-							        <td>Carlos Nava</td>
+							        
 							      </tr>
 							      <tr>
 							        <td>14:00 -15:00</td>
 							        <td>COMIDA</td>
-							        <td></td>
 							      </tr>
 							      <tr>
 							        <td>15:01 - 16:00</td>
 							        <td>Esquema Legal y Fiscal del Proceso de Venta</td>
-							        <td>Por confirmar</td>
 							      </tr>
 							      <tr>
 							        <td>16:01 - 17:00</td>
 							        <td>Perfilamiento de un comprador y créditos hipotecarios</td>
-							        <td>Arturo Hernández</td>
 							      </tr>
 							      <tr>
 							        <td>17:01 - 18:30</td>
 							        <td>Valor comercial de un inmueble</td>
-							        <td>Salvador Vázquez</td>
 							      </tr>
 							    </tbody>
 							  </table>
@@ -141,24 +137,20 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 							      <tr>
 							        <th>Horario</th>
 							        <th>Tema</th>
-							        <th>Expositor</th>
 							      </tr>
 							    </thead>
 							    <tbody>
 							      <tr>
 							        <td>10:00 - 11:30</td>
 							        <td>Módulo 3: Arrendamiento</td>
-							        <td>Rafael Guizar</td>
 							      </tr>
 							      <tr>
 							        <td>11:30 - 13:00</td>
 							        <td>Cómo arrancar y hacer crecer tu negocio inmobiliario (apalancamiento)</td>
-							        <td>Carlos Nava</td>
 							      </tr>
 							      <tr>
 							        <td>13:00 - 14:30</td>
 							        <td>Visión y misión (video corporativo)</td>
-							        <td>Ricardo Guizar</td>
 							      </tr>
 							    </tbody>
 							  </table>
@@ -178,6 +170,23 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 				    <span class="paypal-logo">
 				      <i>Pay</i><i>Pal</i>
 				    </span>
+				  </button>
+				</div>
+				</form>
+				<!--2 boton-->
+				<div>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="CL82LQSBBNBCE">
+    			<div class="box">
+				  <button class="paypal-buttonDos">
+				    <span class="paypal-button-title">
+				      Pagar ahora con
+				    </span>
+				    <span class="paypal-logoDos">
+				      <i>Pay</i><i>Pal</i>
+				    </span>
+				    <p class="sixMonth">6 meses sin intereses</p>
 				  </button>
 				</div>
 				</form>
