@@ -18,6 +18,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    .borde{border:7px solid #FFAF04}
+    </style>
   </head>
   <body>
   <header>
@@ -240,8 +243,14 @@
 
     <script>
 		$('#Inscribete').click(function() {
-				$('#Name1,#Email1').css({'border':'7px solid #FFAF04'});
-		});
+       var loops = 1 * 2;
+       function removeAddClass() {
+           $('#Name1,#Email1').toggleClass("borde");
+           if (--loops > 0)
+                setTimeout(removeAddClass, 2000);
+       }
+       removeAddClass();
+   });
 		$('#Mision').click(function() {
 				$('body').scrollTo('#negative', 800);
 		});
