@@ -26,12 +26,15 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-
-        $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
-        $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
+        $mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
+        $mail2->Password = 'programacion2016';
+        //$mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
+        //$mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        $mail2->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario');  //se envia mail  a user desde este (solo se envia)
-        $mail2->addAddress('franquiciasquality@gmail.com','Exito Inmobiliario'); //aqui llega el mail para el administrador
+        //$mail2->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario');  //se envia mail  a user desde este (solo se envia)
+        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
+        //$mail2->addAddress('franquiciasquality@gmail.com','Exito Inmobiliario'); //aqui llega el mail para el administrador
+        $mail2->addAddress('erik@concepthaus.mx','Erik Rodriguez');// Aquí llega el correo en pruebas.
         $mail2->isHTML(true);
         $mail2->CharSet = 'UTF-8';
         $mail2->Subject = 'Nuevo cliente'; 
@@ -41,22 +44,26 @@ require 'phpmailer/PHPMailerAutoload.php';
         
 
         //Envia Mail Cliente
-        $mail = new PHPMailer;
+        $mail2 = new PHPMailer;
         //$mail->SMTPDebug = 3;
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = "tls";
-        $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
-        $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
-        $mail->Port = 587;
-        $mail->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario'); //se envia mail  a user desde este (solo se envia) 
-        $mail->addAddress($email,$nombre);
-        $mail->isHTML(true);
-        $mail->CharSet = 'UTF-8';
-        $mail->Subject = 'Gracias por tu apoyo'; 
-        $mail->Body = $templateUser;
-        $mail->send();
+        $mail2->isSMTP();
+        $mail2->Host = 'smtp.gmail.com';
+        $mail2->SMTPAuth = true;
+        $mail2->SMTPSecure = "tls";
+        $mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
+        $mail2->Password = 'programacion2016';
+        //$mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
+        //$mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
+        $mail2->Port = 587;
+        //$mail->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario'); //se envia mail  a user desde este (solo se envia) 
+        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
+        $mail2->addAddress($email,$nombre);
+        //$mail2->addAddress('erik@concepthaus.mx','Erik Rodriguez');// Aquí llega el correo en pruebas.
+        $mail2->isHTML(true);
+        $mail2->CharSet = 'UTF-8';
+        $mail2->Subject = 'Gracias por tu apoyo'; 
+        $mail2->Body = $templateUser;
+        $mail2->send();
 
     
         }
@@ -87,7 +94,7 @@ $seis = mysqli_real_escape_string($db,$_POST['PrincipalRazon']);
 $siete = mysqli_real_escape_string($db,$_POST['ObjIngresos']);
 $ocho = mysqli_real_escape_string($db,$_POST['MayorObstaculo']);
 $diez = mysqli_real_escape_string($db,$_POST['OpcionRespuesta']);
-$hash = sha1(rand(0,1000));
+$hash = sha1(rand(0,1000)); //En la base de datos esta como varchar y 40 caracteres.
 
 
 
@@ -99,7 +106,6 @@ $hash = sha1(rand(0,1000));
 					
 						if($result){
 							enviaMail($dos,$correoo,$hash);
-	
 							echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
 							
 												<script>swal({   title: 'Datos guardados con éxito,te hemos enviado un correo con el link al temario.',   text: '¡Da click en el boton OK para ver el temario!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true}, function(){
@@ -107,7 +113,8 @@ $hash = sha1(rand(0,1000));
 												}); </script></div>";
 						}else{
 							//Error datos duplicados
-							echo "<div id='AjaxAct'><script>sweetAlert('Error', 'Ya hemos guardado tus datos', 'error'); </script></div>";
+							echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'Ya hemos guardado tus datos',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
 							
 						}
 
@@ -115,7 +122,8 @@ $hash = sha1(rand(0,1000));
 
 				else{
 						//Error datos incompletos
-					echo "<div id='AjaxAct'><script>sweetAlert('Error', 'Los datos están incompletos', 'error'); </script></div>";
+					echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'Los datos estan incompletos',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
 				}
 
 
