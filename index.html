@@ -123,10 +123,13 @@
         <div class="col-sm-6">
           <iframe src="https://www.youtube.com/embed/V6WqkGWwOJI" frameborder="0" allowfullscreen class="videoYoutube"></iframe>
           <p class="blackFont">En este video te presentamos <span class="blackFontSpan"><br>el secreto para alcanzar el éxito financiero</span><br> a través de los bienes raíces.</p>
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-default blueButton">¡DÉJANOS TUS DATOS!</button>
+          </div>
         </div>
         <div class="col-sm-6">
         	<p class="experienceFont">Te damos el <span class="whiteSpan">"paso a paso"</span> del <span class="whiteSpan">camino al éxito inmobiliario </span>sin necesidad de que <span class="whiteSpan">cuentes con experiencia.</span></p>
-        	<button type="submit" class="btn btn-default blueButton">¡ME INTERESA!</button>
+          <button type="submit" class="btn btn-default blueButtonRepeat">¡DÉJANOS TUS DATOS!</button>
         </div>
       </div>
     </div>
@@ -226,7 +229,7 @@
         <!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="left"><tr><td align="left"></td></tr><tr><td align="left"><a href="#" onclick="javascript:window.open('https://www.paypal.com/mx/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=700, height=600');"><img class="banPaypal" src="https://www.paypal.com/es_XC/Marketing/i/banner/paypal_visa_mastercard_amex_debit_new.png" border="0" alt="Comprador local"></a></td></tr></table><!-- PayPal Logo -->
       </div>
         <div class="col-xs-4 text-right">
-          <strong class="transformar"><a href="#">Aviso de privacidad</a></strong>
+          <strong class="transformar"><a target="#blank" href="PoliticadePrivacidad.pdf">Aviso de privacidad</a></strong>
         </div>
         <div class="col-xs-4 text-left">
           Powered by <strong class="transformar"><a target="#blank" href="http://concepthaus.mx/">CONCEPT HAUS</a></strong>
@@ -240,6 +243,8 @@
     <script src="js/jquery.scrollTo.js"></script>
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+     
 
     <script>
 		$('#Inscribete').click(function() {
@@ -266,6 +271,9 @@
 		$('.blueButtonDos').click(function() {
 				$('body').scrollTo('.blueBg', 800);
 		});
+    $('.blueButtonRepeat').click(function() {
+        $('body').scrollTo('#tituloContacto', 800);
+    });
 
 
       $(window).on("scroll", function() {
