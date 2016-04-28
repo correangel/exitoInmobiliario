@@ -26,15 +26,15 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-        $mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
-        $mail2->Password = 'programacion2016';
-        //$mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
-        //$mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
+        //$mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
+        //$mail2->Password = '';
+        $mail2->Username = 'franquiciasquality@gmail.com'; //se envia mail  a user desde este (solo se envia)
+        $mail2->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        //$mail2->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario');  //se envia mail  a user desde este (solo se envia)
-        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
-        //$mail2->addAddress('franquiciasquality@gmail.com','Exito Inmobiliario'); //aqui llega el mail para el administrador
-        $mail2->addAddress('erik@concepthaus.mx','Erik Rodriguez');// Aquí llega el correo en pruebas.
+        $mail2->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario');  //se envia mail  a user desde este (solo se envia)
+        //$mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
+        $mail2->addAddress('franquiciasquality@gmail.com','Exito Inmobiliario'); //aqui llega el mail para el administrador
+        //$mail2->addAddress('erik@concepthaus.mx','Erik Rodriguez');// Aquí llega el correo en pruebas.
         $mail2->isHTML(true);
         $mail2->CharSet = 'UTF-8';
         $mail2->Subject = 'Nuevo cliente'; 
@@ -50,13 +50,13 @@ require 'phpmailer/PHPMailerAutoload.php';
         $mail2->Host = 'smtp.gmail.com';
         $mail2->SMTPAuth = true;
         $mail2->SMTPSecure = "tls";
-        $mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
-        $mail2->Password = 'programacion2016';
-        //$mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
-        //$mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
+        //$mail2->Username = 'erik@concepthaus.mx'; //Mail para pruebas
+        //$mail2->Password = '';
+        $mail->Username = 'franquiciasquality@gmail.com';//se envia mail  a user desde este (solo se envia)
+        $mail->Password = 'franquicias135';//se envia mail  a user desde este (solo se envia)
         $mail2->Port = 587;
-        //$mail->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario'); //se envia mail  a user desde este (solo se envia) 
-        $mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
+        $mail->setFrom('franquiciasquality@gmail.com','Exito Inmobiliario'); //se envia mail  a user desde este (solo se envia) 
+        //$mail2->setFrom('erik@concepthaus.mx','Erik Rodriguez'); //Pruebas se envía de este
         $mail2->addAddress($email,$nombre);
         //$mail2->addAddress('erik@concepthaus.mx','Erik Rodriguez');// Aquí llega el correo en pruebas.
         $mail2->isHTML(true);
