@@ -89,7 +89,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
             <div class="col-md-7">
                 
                     <h2 class="text-left"><b style= "text-transform: uppercase;">  <?php echo $nomm ?></b>, GRACIAS POR <b>TU INTERÉS</b></h2>
-                    <p class="textResponse">Proporciónanos los siguientes datos para sugerirte una membresía a tu medida:</p>
+                    <p class="textResponse">Si estás interesado en aprender a comercializar inmuebles, déjanos tus datos:</p>
 
                     <form  id="cuestion"  class="infoForm row">
                     <div class="col-xs-12">

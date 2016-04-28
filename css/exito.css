@@ -82,7 +82,7 @@ li.whiteFont {font-size: 20px; }
 .blueFont{color: #0089ce;}
 .blueSpan{font-weight: 600;}
 .whiteSpan{color: #ffffff;font-weight: 600;}
-.experienceFont{font-size: 25px;}
+.experienceFont{font-size: 25px;margin-top: 70px; }
 .trainingFont{color: #ffaf04;text-align: center;font-size: 25px;}
 .trainingSize{font-size: 17px;text-align: center;}
 .trainingStrong{font-weight: 600; font-size: 30px;text-align: center;display: block;}
@@ -112,12 +112,13 @@ li.whiteFont {font-size: 20px; }
 /*BOTÓN*/
 .greenButton{background-color: #a3db63; color: #FFFFFF; text-transform: uppercase; padding: 6px 73px; font-size: 24px; border-radius: 0; font-weight: 600; display: block; margin: 0 auto; }
 .greenButton:hover, .greenButtonDos:hover{background-color: #FFFFFF; color: #a3db63;}
-.blueButton{background-color: deepskyblue; color: #ffffff; font-size: 24px; padding: 8px 59px;border-radius: 0;margin-top: 20px;}
+.blueButton{background-color: deepskyblue; color: #ffffff; font-size: 24px; padding: 8px 30px;border-radius: 0;margin-top: 20px;margin:0 auto;display: block;}
 .blueButton:hover, .blueButtonDos:hover{color: deepskyblue;background-color: #ffffff;}
 .yellowButton{color: #ffffff; background-color: #FFAF04; font-size: 22px; font-weight: 600; border-radius: 0; padding: 9px 43px;}
 .yellowButton:hover{color: #FFAF04; background-color: #FFFFFF;}
 .greenButtonDos{background-color: #a3db63; color: #FFFFFF; text-transform: uppercase; padding: 6px 73px; font-size: 22px; border-radius: 0; font-weight: 600; display: block;margin: 0 auto;}
 .blueButtonDos{background-color: deepskyblue; color: white; font-size: 24px; padding: 8px 59px; border-radius: 0; padding-right: 24px; margin-top: 35px;}
+.blueButtonRepeat{background-color: deepskyblue; color: #ffffff; font-size: 24px; padding: 8px 30px;border-radius: 0;margin-top: 20px;display: none;}
 
 /*FOOTER*/
 footer{background-color: deepskyblue;color: #FFFFFF;padding: 30px 40px;}
@@ -231,8 +232,8 @@ section.Carrusel {display: none; }
 .greenButton {margin: 0 auto; }
 iframe.videoYoutube {height: 237px; width: 74%; display: block; margin: 0 auto; }
 .blackFont {margin-top: 15px; }
-.experienceFont {text-align: center; }
-.blueButton {margin: 0px auto; display: block; }
+.experienceFont {text-align: center;margin-top: 0px;}
+.blueButton {display: none; }
 .yellowButton {margin-left: 0px; margin: 0 auto; display: block; }
 #tituloConocimientos img {display: none; }
 #tituloConocimientos {padding-bottom: 50px; }
@@ -252,6 +253,8 @@ h2 {font-size: 22px; }
 .navbar-brand>img {height: 41px; }
 .sliderForm {height: 490px; }
 #negative, #negativeUno {margin-top: -90px; }
+.blueButtonRepeat {display: block; margin: 0 auto;font-size: 20px;}
+footer {padding: 15px 27px; }
 }
 
 @media(max-width: 600px){
@@ -300,6 +303,7 @@ h2 {font-size: 22px; }
 	footer {padding: 6px 10px; }
 	li.whiteFont {margin-left: -35px; }
 	.banPaypal {margin-top: -2px !important; margin-left: -18px; width: 95px; }
+	.blueButtonRepeat {font-size: 16px;}
 }
 
 @media(max-width: 320px){
