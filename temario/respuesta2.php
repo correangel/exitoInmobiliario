@@ -86,12 +86,12 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 							        
 							      </tr>
 							      <tr>
-							        <td>10:01 - 11:30</td>
+							        <td>10:00 - 11:30</td>
 							        <td>Módulo 1: Proceso de Venta de un inmueble</td>
 							        
 							      </tr>
 							      <tr>
-							        <td>11:31 - 13:00</td>
+							        <td>11:30 - 13:00</td>
 							        <td>Modulo 2: Mercado de Compradores</td>
 							        
 							      </tr>
@@ -105,15 +105,15 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 							        <td>COMIDA</td>
 							      </tr>
 							      <tr>
-							        <td>15:01 - 16:00</td>
+							        <td>15:00 - 16:00</td>
 							        <td>Esquema Legal y Fiscal del Proceso de Venta</td>
 							      </tr>
 							      <tr>
-							        <td>16:01 - 17:00</td>
+							        <td>16:00 - 17:00</td>
 							        <td>Perfilamiento de un comprador y créditos hipotecarios</td>
 							      </tr>
 							      <tr>
-							        <td>17:01 - 18:30</td>
+							        <td>17:00 - 18:30</td>
 							        <td>Valor comercial de un inmueble</td>
 							      </tr>
 							    </tbody>
@@ -159,6 +159,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 					  </div>
 					</div>
     			</div>
+    			<h5 class="threePay">Contamos con 3 formas de pago:</h5>
     			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="V5HHQJUYNHX5Y">
@@ -194,6 +195,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
     		<div class="col-sm-12">
     		<h5>Ó puedes depositar en el siguiente numero de cuenta:</h5>
     			<p>
+	    			Titular de la cuenta: Carlos Miguel Nava González<br>
     				Banco: Bancomer<br>
 					No de cuenta: 165007348<br>
 					Cuenta Clabe: 01218000165007348 8
