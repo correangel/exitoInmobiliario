@@ -127,4 +127,9 @@ $hash = sha1(rand(0,1000)); //En la base de datos esta como varchar y 40 caracte
 				}
 
 
+
+
+
+
+//ESTOS SON LOS CAMBIOS PARA LA CLOUD REAL FINALES 
 	
