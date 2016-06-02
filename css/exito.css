@@ -15,7 +15,7 @@ i.fa.fa-check{color: #ffaf04}
 .navbar-default .navbar-toggle {background-color: #3BA3D8 !important; }
 .navbar-default .navbar-toggle:hover {background-color: #FFFFFF !important; }
 .navbar-default .navbar-toggle:hover .icon-bar {background-color: #3BA3D8 !important; }
-.navbar-fixed-top {background-color: rgb(53, 157, 208) !important; position: fixed !important; opacity: 0.9;min-height: 35px;}
+.navbar-fixed-top {background-color: rgb(53, 157, 208) !important; position: fixed !important; opacity: 0.9;min-height: 35px;z-index: 99999999 !important;}
 nav.navbar {transition: all 1.2s ease; }
 .container {width: 900px !important;}
 
@@ -55,7 +55,7 @@ h4{color: #ffaf04; font-size: 20px; }
 
 .textCenter{text-align: center;}
 .textCenterExitoso{color: #0089ce;font-size: 30px;text-align: center;}
-.textCenterSize{text-align: left;font-size: 17px; font-weight: 100;}
+.textCenterSize{text-align: justify;font-size: 17px; font-weight: 100;}
 .textCenterForm{text-align: center;font-size: 24px; color:#ffffff;text-align: left;}
 .textSatisfaction{font-weight: 600; font-size: 18px;}
 
@@ -128,7 +128,7 @@ footer .text-right{font-size: 18px;}
 /*MEDIA QUERIES*/
 
 @media (min-width: 852px){
-#Inscribete {margin-right: 120px !important; }
+#Beneficios {margin-right: 120px !important; }
 }
 
 @media (max-width: 1200px){

@@ -193,7 +193,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 				</form>
     		</div>
     		<div class="col-sm-12">
-    		<h5>Ó puedes depositar en el siguiente numero de cuenta:</h5>
+    		<h5>Ó puedes depositar en el siguiente número de cuenta:</h5>
     			<p>
 	    			Titular de la cuenta: Carlos Miguel Nava González<br>
     				Banco: Bancomer<br>

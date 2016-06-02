@@ -37,9 +37,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+            <li><a id="Inscribete">Inscríbete</a></li>
             <li><a id="Mision">Misión</a></li>
             <li><a id="Beneficios">Beneficios</a></li>
-            <li><a id="Inscribete">Inscríbete</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -256,7 +256,9 @@
     });
   
 
-
+    $('#Inscribete').click(function() {
+        $('body').scrollTo('#tituloContacto', 800);
+    });
 		$('#Mision').click(function() {
 				$('body').scrollTo('#negative', 800);
 		});
