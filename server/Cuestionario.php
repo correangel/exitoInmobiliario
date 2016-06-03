@@ -95,41 +95,51 @@ $siete = mysqli_real_escape_string($db,$_POST['ObjIngresos']);
 $ocho = mysqli_real_escape_string($db,$_POST['MayorObstaculo']);
 $diez = mysqli_real_escape_string($db,$_POST['OpcionRespuesta']);
 $hash = sha1(rand(0,1000)); //En la base de datos esta como varchar y 40 caracteres.
+$longtel = strlen ($cuatro);
 
 
+if(is_numeric ($cuatro)){
 
+if ($longtel >= 8 ){
+        $sql1 = "INSERT INTO Cuestionario (`id`,`mail`,`nom`,`ciudaduser`,`tel`,`conocimientoInmobil`,`PrincipalRazon`,`ObjIngresos`, `MayorObstaculo`,`OpcionRespuesta`,`status`,`hash`) 
+            VALUES((SELECT `id` FROM Formulario WHERE `correo` = '$correoo'),'$correoo','$dos','$tres','$cuatro' ,'$cinco','$seis','$siete','$ocho','$diez','1','$hash');";
 
-		$sql1 = "INSERT INTO Cuestionario (`id`,`mail`,`nom`,`ciudaduser`,`tel`,`conocimientoInmobil`,`PrincipalRazon`,`ObjIngresos`, `MayorObstaculo`,`OpcionRespuesta`,`status`,`hash`) 
-			VALUES((SELECT `id` FROM Formulario WHERE `correo` = '$correoo'),'$correoo','$dos','$tres','$cuatro' ,'$cinco','$seis','$siete','$ocho','$diez','1','$hash');";
-
-		$result = mysqli_query($db, $sql1);
-					
-						if($result){
-							enviaMail($dos,$correoo,$hash);
-							echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
-							
-												<script>swal({   title: 'Datos guardados con éxito!',   text: 'Te hemos enviado un correo con el link al temario.',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'Ver temario',   closeOnConfirm: true}, function(){
-													window.open('/exitoinm/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
-												}); </script></div>";
-						}else{
-							//Error datos duplicados
-							echo "<div id='AjaxAct'>
+        $result = mysqli_query($db, $sql1);
+                    
+                        if($result){
+                            enviaMail($dos,$correoo,$hash);
+                            echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
+                            
+                                                <script>swal({   title: 'Datos guardados con éxito,te hemos enviado un correo con el link al temario.',   text: '¡Da click en el boton OK para ver el temario!',   type: 'success',   showCancelButton: true,   confirmButtonColor: '#a3db63',   confirmButtonText: 'OK',   closeOnConfirm: true}, function(){
+                                                    window.open('/exitoinm/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
+                                                }); </script></div>";
+                        }else{
+                            //Error datos duplicados
+                            echo "<div id='AjaxAct'>
                                             <script>sweetAlert({title:'Error',text:'Ya hemos guardado tus datos',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
-							
-						}
+                            
+                        }
 
-				}
+                }
 
-				else{
-						//Error datos incompletos
-					echo "<div id='AjaxAct'>
+
+                else {
+                    echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe contener 8 digitos como minimo.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+                }
+            }
+            else{
+                echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe ser numerico.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+
+            }
+
+            
+        }
+
+
+
+                else{
+                        //Error datos incompletos
+                    echo "<div id='AjaxAct'>
                                             <script>sweetAlert({title:'Error',text:'Los datos estan incompletos',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
-				}
-
-
-
-
-
-
-//ESTOS SON LOS CAMBIOS PARA LA CLOUD REAL FINALES 
-	

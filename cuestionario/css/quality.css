@@ -1,7 +1,10 @@
 body {overflow-x: hidden; font-family: "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #FFBD03;}
 .text-muted {color: #777 }
 .text-primary {color: #fed136 }
+.infoForm select {color: #999999;}
 p {font-size: 14px; line-height: 1.75; }
+.sector{font-size: 15px; margin-top: 14px; font-weight: 100; text-transform: initial !important; margin-left: 20px;
+    color: #999999;}
 p.large {font-size: 16px; }
 ul, menu, dir {display: block; list-style-type: disc; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0; }
 a, a:hover, a:focus, a:active, a.active {outline: 0 }
@@ -404,13 +407,13 @@ section h3.section-subheading {
     }
     .navbar-right {margin-top: 25px;}
     .carousel-caption {
-	    right: inherit;
-	    left: 10%;
-	    padding-bottom: 30px;
-	    text-align: right;
-	    width: 450px;
-	}
-	.carousel-indicators {
+        right: inherit;
+        left: 10%;
+        padding-bottom: 30px;
+        text-align: right;
+        width: 450px;
+    }
+    .carousel-indicators {
     bottom: 50px;}
     .navbar-shrink .navbar-right {
     margin-top: 16px;
@@ -463,9 +466,9 @@ section h3.section-subheading {
         padding: 0 100px 20px 20px
     }
     .sliderQuality {
-	    max-height: 800px;
-	    overflow: hidden;
-	}
+        max-height: 800px;
+        overflow: hidden;
+    }
 }
 .team-member {
     text-align: center;
@@ -680,7 +683,7 @@ body {
     height: auto;
 }
 .logoNavbarMin {
-	margin: 0;
+    margin: 0;
     padding: 0;
     height: auto;
     display: none;
@@ -694,7 +697,7 @@ body {
 }
 
 .infoForm{
-	background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .8);
     padding: 20px;
     border-radius: 10px;
 }

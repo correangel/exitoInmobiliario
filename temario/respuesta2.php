@@ -193,7 +193,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
 				</form>
     		</div>
     		<div class="col-sm-12">
-    		<h5>Ó puedes depositar en el siguiente número de cuenta:</h5>
+    		<h5>Ó puedes depositar en el siguiente numero de cuenta:</h5>
     			<p>
 	    			Titular de la cuenta: Carlos Miguel Nava González<br>
     				Banco: Bancomer<br>
@@ -227,7 +227,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
     	<div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6 text-right">
-                  <strong class="transformar"><a href="#">Aviso de privacidad</a></strong>
+                 <strong class="transformar"><a target="#blank" href="../PoliticadePrivacidad.pdf">Aviso de privacidad</a></strong>
                 </div>
                 <div class="col-xs-6 text-left">
                 <span>Powered by </span><a target="#blank" href="http://concepthaus.mx/">CONCEPT HAUS</a>
