@@ -118,15 +118,18 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" rows="3" name="PrincipalRazon" class="form-control" placeholder="¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?" title="¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?">
+                        <p class="inmo">¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?</p>
+                        <input type="text" rows="3" name="PrincipalRazon" class="form-control">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="ObjIngresos" class="form-control" placeholder="¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?">
+                    <p>¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?</p>
+                        <input type="text" name="ObjIngresos" class="form-control">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="MayorObstaculo" class="form-control" placeholder="¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?">
+                    <p>¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?</p>
+                        <input type="text" name="MayorObstaculo" class="form-control">
                     </div>
 
                     
