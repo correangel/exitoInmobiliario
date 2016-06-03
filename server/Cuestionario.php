@@ -95,10 +95,12 @@ $siete = mysqli_real_escape_string($db,$_POST['ObjIngresos']);
 $ocho = mysqli_real_escape_string($db,$_POST['MayorObstaculo']);
 $diez = mysqli_real_escape_string($db,$_POST['OpcionRespuesta']);
 $hash = sha1(rand(0,1000)); //En la base de datos esta como varchar y 40 caracteres.
+$longtel = strlen ($cuatro);
 
 
+if(is_numeric ($cuatro)){
 
-
+if ($longtel >= 8 ){
 		$sql1 = "INSERT INTO Cuestionario (`id`,`mail`,`nom`,`ciudaduser`,`tel`,`conocimientoInmobil`,`PrincipalRazon`,`ObjIngresos`, `MayorObstaculo`,`OpcionRespuesta`,`status`,`hash`) 
 			VALUES((SELECT `id` FROM Formulario WHERE `correo` = '$correoo'),'$correoo','$dos','$tres','$cuatro' ,'$cinco','$seis','$siete','$ocho','$diez','1','$hash');";
 
@@ -119,6 +121,23 @@ $hash = sha1(rand(0,1000)); //En la base de datos esta como varchar y 40 caracte
 						}
 
 				}
+
+
+                else {
+                    echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe contener 8 digitos como minimo.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+                }
+            }
+            else{
+                echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe ser numerico.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+
+            }
+
+            
+        }
+
+
 
 				else{
 						//Error datos incompletos

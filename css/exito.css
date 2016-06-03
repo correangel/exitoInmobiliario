@@ -1,5 +1,6 @@
 /*ESTILOS GENERALES*/
 body{font-family: 'Gill Sans', sans-serif; -webkit-font-smoothing: antialiased; font-weight: 100; color: #808080; line-height: 30px;}
+
 a{cursor: pointer;color: #ffffff;}
 a:hover, a:focus, a:active, a:visited{text-decoration: none;outline: 0; box-shadow: none;color: #ffffff;}
 strong{font-weight: 400;}
@@ -215,6 +216,7 @@ footer {padding: 30px 27px;}
 #negative, #negativeUno {margin-top: -105px; }
 }
 
+
 @media (max-width: 767px){
 	.banPaypal {margin-top: 0px !important; width: 170px; }
 .sliderExito img {width: 180%; max-width: inherit !important; }
@@ -321,3 +323,4 @@ footer {padding: 15px 27px; }
 	.textCenterExitoso {font-size: 20px; }
 	.banPaypal {margin-top: -2px !important; margin-left: 0px; width: 80px; }
 }
+
