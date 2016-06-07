@@ -104,6 +104,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                         <input type="text" name="tel" class="form-control" placeholder="Número Telefónico (celular de preferencia)">
                     </div>
 
+
                     <div class="col-sm-12">
                         <p class="inmo">¿Tienes conocimiento del sector inmobiliario?</p>
                     </div>
@@ -111,16 +112,19 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                         <select name="conocimientoInmobil">
                           <option  value="si" selected>Si</option>
                           <option  value="no" >No</option>
+
                         </select>
                     </div>
 
                     <div class="col-sm-12">
+
                           <p   class="inmo">¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?</p>
                           <input type="text" rows="3" name="PrincipalRazon" class="form-control">
                     </div>
                 
 
                     <div class="col-sm-12">
+
                     <p class="inmo" >¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?</p>
                     <input type="text" name="ObjIngresos" class="form-control">
                     </div>

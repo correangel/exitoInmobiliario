@@ -115,6 +115,7 @@ if ($longtel >= 8 ){
                             enviaMail($dos,$correoo,$hash);
                             echo "<div id='AjaxAct'><script>document.getElementById('cuestion').reset(); </script> 
                             
+
                                                 <script>swal({   title: 'Datos guardados con éxito.',   text: 'Te hemos enviado un correo con el link al temario.',   type: 'success',   showCancelButton: false,   confirmButtonColor: '#a3db63',   confirmButtonText: 'Ver temario',   closeOnConfirm: true}, function(){
                                                     window.open('/temario/respuesta2.php?correo=$correoo&hash=$hash','_blank' ); 
                                                 }); </script></div>";
@@ -150,10 +151,19 @@ if ($longtel >= 8 ){
                                             <script>sweetAlert({title:'Error',text:'Los datos estan incompletos',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
                 }
 
+                else {
+                    echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe contener 8 digitos como minimo.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+                }
+            }
+            else{
+                echo "<div id='AjaxAct'>
+                                            <script>sweetAlert({title:'Error',text:'El campo teléfono debe ser numerico.',confirmButtonColor:'#F06060' ,type:'error'}); </script></div>";
+
+            }
+
+            
+        }
 
 
 
-
-
-//ESTOS SON LOS CAMBIOS PARA LA CLOUD REAL FINALES 
-    
