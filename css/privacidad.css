@@ -2,6 +2,10 @@
 /*Aviso de Privacidad*/
 #exitoMenu {position: absolute; z-index: 1; width: 100%; background-color: transparent; border: 0; /*border-bottom: 1px solid rgba(255,255,255,0.2);*/ }
 
+a {
+    color: #FFB104 !important;
+}
+
 .styleHR {
 	border-color: #ffaf04;
 	margin-top: -.5em;
@@ -47,7 +51,7 @@
 
 
 /*FOOTER*/
-footer{background-color: deepskyblue;color: #FFFFFF;padding: 30px 40px;}
+footer{background-color: #0089CE;color: #FFFFFF;padding: 30px 40px;}
 footer .text-left{border-left: 1px solid #FFFFFF;font-size: 18px;}
 footer .text-right{font-size: 18px;}
 

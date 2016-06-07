@@ -8,11 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Quality - Inmobiliaria viendo por ti</title>
-
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
+    <title>Éxito inmobiliario</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -97,7 +94,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                     </div>
 
                     <div class="col-xs-12">
-                        <input type="text" name="nom"  class="form-control" placeholder="Nombre">
+                        <input type="text" name="nom"  class="form-control" placeholder="Nombre completo">
                     </div>
                     <div class="col-sm-12">
                         <input type="text" name="ciudaduser" class="form-control" placeholder="Ciudad">
@@ -108,19 +105,29 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="conocimientoInmobil"  class="form-control" placeholder="¿Tienes conocimiento del sector inmobiliario?">
+                        <p class="inmo">¿Tienes conocimiento del sector inmobiliario?</p>
+                    </div>
+                     <div class="col-sm-7 col-xs-5">
+                        <select name="conocimientoInmobil">
+                          <option  value="si" selected>Si</option>
+                          <option  value="no" >No</option>
+                        </select>
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="PrincipalRazon" class="form-control" placeholder="¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?">
+                          <p   class="inmo">¿Cuál es la principal razón por la que estás interesado en el negocio inmobiliario?</p>
+                          <input type="text" rows="3" name="PrincipalRazon" class="form-control">
+                    </div>
+                
+
+                    <div class="col-sm-12">
+                    <p class="inmo" >¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?</p>
+                    <input type="text" name="ObjIngresos" class="form-control">
                     </div>
 
                     <div class="col-sm-12">
-                        <input type="text" name="ObjIngresos" class="form-control" placeholder="¿Cuál es tu objetivo de ingresos mensuales con la comercialización de inmuebles?">
-                    </div>
-
-                    <div class="col-sm-12">
-                        <input type="text" name="MayorObstaculo" class="form-control" placeholder="¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?">
+                       <p class="inmo" >¿Cuál crees que es el MAYOR obstáculo que ha impedido que aument​es​ rápidamente tus ingresos?</p>
+                       <input type="text" name="MayorObstaculo" class="form-control">
                     </div>
 
                     
@@ -134,7 +141,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                     <div class="col-xs-12 text-center">
                         <button class="submQual" type="submit" value="ENVIAR">ENVIAR</button>
                     </div>
-                </form>
+               </form> 
             </div>
         </div>
     </div>

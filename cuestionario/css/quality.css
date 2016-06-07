@@ -1,7 +1,10 @@
 body {overflow-x: hidden; font-family: "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #FFBD03;}
 .text-muted {color: #777 }
 .text-primary {color: #fed136 }
+.infoForm select {color: #999999;}
 p {font-size: 14px; line-height: 1.75; }
+.sector{font-size: 15px; margin-top: 14px; font-weight: 100; text-transform: initial !important; margin-left: 20px;
+    color: #999999;width: 100%;}
 p.large {font-size: 16px; }
 ul, menu, dir {display: block; list-style-type: disc; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0; }
 a, a:hover, a:focus, a:active, a.active {outline: 0 }
@@ -1117,6 +1120,11 @@ body.errorPg {
     #afiliadosCarousel .carousel-indicators {bottom: -10px; }
     h1{display: none;}
 }
+
+@media(max-width: 684px){
+    .inmo {margin-top: 100px !important; }
+}
+
 @media (max-width: 600px) {
     .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {max-width: 220%;}
     .videoQltMail iframe {top: 0px; }
@@ -1135,4 +1143,8 @@ body.errorPg {
     .coutasQlt h6 {height: 65px;}
     .coutasQlt li {font-size: 22px;}
     #afiliadosCarousel .carousel-control {bottom: 20px;top: inherit;}
+}
+
+@media (max-width: 343px){
+.inmo {margin-top: 112px !important; }
 }
