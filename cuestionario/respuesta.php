@@ -97,7 +97,7 @@ if(isset($_GET['correo']) && !empty($_GET['correo']) AND isset($_GET['hash']) &&
                     </div>
 
                     <div class="col-xs-12">
-                        <input type="text" name="nom"  class="form-control" placeholder="Nombre">
+                        <input type="text" name="nom"  class="form-control" placeholder="Nombre completo">
                     </div>
                     <div class="col-sm-12">
                         <input type="text" name="ciudaduser" class="form-control" placeholder="Ciudad">
