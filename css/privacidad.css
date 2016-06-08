@@ -3,7 +3,7 @@
 #exitoMenu {position: absolute; z-index: 1; width: 100%; background-color: transparent; border: 0; /*border-bottom: 1px solid rgba(255,255,255,0.2);*/ }
 
 a {
-    color: #FFB104;
+    color: #FFB104 !important;
 }
 
 .styleHR {
